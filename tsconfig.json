@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES5",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
@@ -16,6 +16,7 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
+  "typeRoots": ["../node_modules/@types", "../@types"],
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

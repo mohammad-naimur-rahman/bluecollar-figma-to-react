@@ -8,6 +8,10 @@ html {
   min-height: 100dvh;
 }
 
+body {
+  background-color: $bg;
+}
+
 h1 {
   font-size: 60px;
 }
@@ -44,4 +48,16 @@ td,
 th,
 textarea {
   font-size: 18px;
+}
+
+@mixin mq($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin mqh {
+  @media (hover) {
+    @content;
+  }
 }

@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "name": "Home",
+    "link": "/",
+    "hasChildren": false
+  },
+  {
+    "id": 2,
+    "name": "About Us",
+    "link": "/about-us",
+    "hasChildren": false
+  },
+  {
+    "id": 3,
+    "name": "Pages",
+    "link": "",
+    "hasChildren": true,
+    "children": [
+      {
+        "id": 1,
+        "name": "/name",
+        "link": "/"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Services",
+    "link": "/services",
+    "hasChildren": false
+  },
+  {
+    "id": 5,
+    "name": "Blog",
+    "link": "/blog",
+    "hasChildren": false
+  },
+  {
+    "id": 6,
+    "name": "Contact Us",
+    "link": "/contact-us",
+    "hasChildren": false
+  }
+]

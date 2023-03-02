@@ -3,7 +3,7 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "composite": true,
-    "module": "ES2015",
+    "module": "ESNext",
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true
   },
