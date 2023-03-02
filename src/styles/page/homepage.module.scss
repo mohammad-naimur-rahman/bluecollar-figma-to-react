@@ -1,3 +1,5 @@
+@import '../theme.module.scss';
+
 .header {
   height: calc(100vh - 199px);
   background-image: radial-gradient(transparent, #282b35), url('../../assets/images/homepage/hero.png');
@@ -14,4 +16,10 @@
       margin-right: 10px;
     }
   }
+}
+
+$gradient: 80%;
+
+.main-services {
+  background-image: linear-gradient(to bottom, $primary 0%, $primary $gradient, $bg $gradient, $bg 100%);
 }
