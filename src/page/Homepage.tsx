@@ -1,12 +1,10 @@
-import React from 'react'
-import Layout from '../components/ui/Layout.jsx'
+import Layout from '@components/ui/Layout.jsx'
+import HeroSection from '@components/page/Homepage/HeroSection.jsx'
 
 const Homepage = () => {
   return (
     <Layout title="Homepage">
-      <div className="bg-secondary">
-        <h1>Homepage</h1>
-      </div>
+      <HeroSection />
     </Layout>
   )
 }

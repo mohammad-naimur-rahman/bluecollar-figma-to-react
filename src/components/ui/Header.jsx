@@ -40,7 +40,7 @@ const Header = () => {
         </ul>
       </div>
 
-      <section className="flex flex-col bg-white pt-7 pb-[70px]">
+      <section className="flex flex-col bg-white pt-7 pb-12">
         <div className="flex items-center justify-between container">
           <img src={Logo} alt="BlueCollar" className="w-60 h-auto" />
           <div className="flex">
@@ -50,7 +50,7 @@ const Header = () => {
         </div>
       </section>
 
-      <nav className="flex items-center justify-between bg-primary container py-3 absolute -translate-x-1/2 left-1/2 -bottom-10">
+      <nav className="flex items-center justify-between bg-primary container py-3 absolute -translate-x-1/2 left-1/2 -bottom-14">
         <ul className="flex items-center">
           {navData?.map(({ id, name, link, hasChildren }) => (
             <li key={id}>
@@ -64,7 +64,9 @@ const Header = () => {
             </li>
           ))}
         </ul>
-        <Button className="mr-3">Have Any Questions?</Button>
+        <Button variant="secondary" className="mr-3">
+          Have Any Questions?
+        </Button>
       </nav>
     </header>
   )

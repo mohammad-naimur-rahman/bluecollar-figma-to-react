@@ -7,7 +7,9 @@ const NavLinkStyled = ({ to, children, ...rest }) => {
       to={to}
       style={({ isActive }) => {
         return {
-          textDecoration: isActive ? 'underline' : ''
+          textDecoration: isActive ? 'underline' : '',
+          textUnderlineOffset: '1px',
+          textUnderlinePosition: 'under'
         }
       }}
       {...rest}

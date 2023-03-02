@@ -11,7 +11,9 @@ module.exports = {
     },
     colors: {
       primary: '#FFB342',
+      'primary-dark': '#eba63e',
       secondary: '#1C2752',
+      'secondary-dark': '#101731',
       bg: '#F4F4F4',
       'bg-secondary': '#F2F2F2',
       gray: '#7E7E7E',
@@ -28,7 +30,11 @@ module.exports = {
     fontFamily: {
       'font-primary': ['Mulish', 'sans-serif']
     },
-    extend: {}
+    extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'
+      }
+    }
   },
   plugins: []
 }
