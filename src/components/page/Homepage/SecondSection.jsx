@@ -1,6 +1,7 @@
 import React from 'react'
 import image from '@assets/images/homepage/we-provide-your-future.jpg'
 import icon from '@assets/images/homepage/icon.png'
+import Heading from '../../ui/Heading'
 
 const SecondSection = () => {
   return (
@@ -8,10 +9,7 @@ const SecondSection = () => {
       <div className="container flex items-center">
         <img src={image} alt="we-provide-your-future" />
         <div className="p-10 h-full">
-          <div className="inline-flex justify-center items-center bg-bg px-4 py-2">
-            <img src={icon} alt="Blue Collar" className="w-4 h-auto inline-block" />
-            <p className="pl-2 text-secondary">Welcome BlueCollar</p>
-          </div>
+          <Heading img={icon} title="Welcome BlueCollar" />
           <h2 className="text-secondary">We Provide Your Future</h2>
           <p className="text-gray py-3">
             Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium metus. Proin

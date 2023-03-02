@@ -7,6 +7,7 @@ import fourth from '@assets/images/homepage/fourth.png'
 import servicesHero from '@assets/images/homepage/services-hero.png'
 import Button from '../../ui/Button'
 import styles from '@styles/page/homepage.module.scss'
+import Heading from '../../ui/Heading'
 
 const NavButton = ({ img, title, className }) => {
   return (
@@ -45,10 +46,7 @@ const MainServices = () => {
 
         <div className="container bg-white p-10 flex justify-between items-center">
           <div className="w-[60%]">
-            <div className="bg-bg inline-flex px-5 py-2 justify-center items-center">
-              <img src={fourth} alt="Based on commercial" className="w-9" />
-              <p className="text-secondary pl-2">Based on Commercial</p>
-            </div>
+            <Heading img={fourth} title="Based on Commercial" className="mb-2" />
             <h3>Commercial</h3>
             <p className="pt-2 pb-4 text-gray">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do incididunt ut labore et dolore magna
