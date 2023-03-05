@@ -5,6 +5,7 @@ import MainServices from '@components/page/Homepage/MainServices.jsx'
 import OurServices from '@components/page/Homepage/OurServices.jsx'
 import WhyChooseUs from '@components/page/Homepage/WhyChooseUs.jsx'
 import RecentWorks from '@components/page/Homepage/RecentWorks.jsx'
+import TestimonialsAndForm from '@components/page/Homepage/TestimonialsAndForm.jsx'
 
 const Homepage = () => {
   return (
@@ -15,6 +16,7 @@ const Homepage = () => {
       <OurServices />
       <WhyChooseUs />
       <RecentWorks />
+      <TestimonialsAndForm />
     </Layout>
   )
 }
