@@ -22,22 +22,24 @@ const HeaderInforCard = ({ logo, title, description }) => {
 const Header = () => {
   return (
     <header className="relative">
-      <div className="container flex items-center justify-between py-5 bg-bg-secondary">
-        <p>Opening Hours: 06:00 to 20:00</p>
-        <ul className="flex">
-          <li className="mx-1.5">
-            <FaInstagram />
-          </li>
-          <li className="mx-1.5">
-            <FaFacebook />
-          </li>
-          <li className="mx-1.5">
-            <FaTwitter />
-          </li>
-          <li className="mx-1.5">
-            <FaPinterest />
-          </li>
-        </ul>
+      <div className="py-5 bg-bg-secondary">
+        <div className="container flex items-center justify-between">
+          <p>Opening Hours: 06:00 to 20:00</p>
+          <ul className="flex">
+            <li className="mx-1.5">
+              <FaInstagram />
+            </li>
+            <li className="mx-1.5">
+              <FaFacebook />
+            </li>
+            <li className="mx-1.5">
+              <FaTwitter />
+            </li>
+            <li className="mx-1.5">
+              <FaPinterest />
+            </li>
+          </ul>
+        </div>
       </div>
 
       <section className="flex flex-col bg-white pt-7 pb-12">
