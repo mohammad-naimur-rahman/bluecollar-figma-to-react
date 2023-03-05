@@ -5,8 +5,7 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1.5rem',
-        sm: '0'
+        DEFAULT: 0
       }
     },
     colors: {
@@ -22,11 +21,23 @@ module.exports = {
       black: '#2F2F2F'
     },
     screens: {
-      sm: '480px',
-      md: '576px',
-      lg: '768px',
-      xl: '992px',
-      xxl: '1200px'
+      // sm: '480px',
+      // md: '576px',
+      // lg: '768px',
+      // xl: '992px',
+      // xxl: '1200px'
+
+      xl: { max: '1200px' },
+      // => @media (max-width: 1279px) { ... }
+
+      lg: { max: '992px' },
+      // => @media (max-width: 1023px) { ... }
+
+      md: { max: '768px' },
+      // => @media (max-width: 767px) { ... }
+
+      sm: { max: '640px' }
+      // => @media (max-width: 639px) { ... }
     },
     fontFamily: {
       'font-primary': ['Mulish', 'sans-serif']
