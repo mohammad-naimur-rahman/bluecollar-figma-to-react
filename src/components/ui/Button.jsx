@@ -6,10 +6,11 @@ const Button = ({ children, className, variant = 'primary', ...rest }) => {
     <button
       {...rest}
       className={classNames(
-        'px-6 py-4 transition-all font-bold',
+        'px-6 py-4 transition-all font-bold border-2',
         {
-          'bg-primary  hover:bg-primary-dark text-secondary': variant === 'primary',
-          'bg-secondary hover:bg-secondary-dark text-white': variant === 'secondary'
+          'bg-primary  hover:bg-primary-dark text-secondary border-primary': variant === 'primary',
+          'bg-secondary hover:bg-secondary-dark text-white border-secondary': variant === 'secondary',
+          'bg-white hover:bg-white-dark text-secondary border-primary': variant === 'white'
         },
         className
       )}

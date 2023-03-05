@@ -4,6 +4,10 @@ import icon from '@assets/images/homepage/why-choose-us-icon.png'
 import testimonial1 from '@assets/images/homepage/testimonial-person.png'
 import quote from '@assets/images/homepage/quote.png'
 import dial from '@assets/images/homepage/dial.png'
+import brand1 from '@assets/images/homepage/brand-1.png'
+import brand2 from '@assets/images/homepage/brand-2.png'
+import brand3 from '@assets/images/homepage/brand-3.png'
+import brand4 from '@assets/images/homepage/brand-4.png'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 import Input from '../../ui/Input'
 import Button from '../../ui/Button'
@@ -11,7 +15,7 @@ import Button from '../../ui/Button'
 const TestimonialsAndForm = () => {
   return (
     <div className="bg-white">
-      <div className="container flex gap-10 py-40">
+      <div className="container flex gap-10 pt-40">
         <div className="w-1/2">
           <Heading img={icon} title="Testimonials" />
           <h3 className="pt-1 pb-5">Customers Say</h3>
@@ -69,6 +73,18 @@ const TestimonialsAndForm = () => {
             <Input as="textarea" placeholder="Service Description" className="h-52" />
             <Button variant="primary">Submit</Button>
           </form>
+        </div>
+      </div>
+      <div className="container pt-20 pb-40">
+        <div className="flex flex-col justify-center">
+          <Heading img={icon} title="Clients" className="self-center" />
+          <h3 className="text-secondary text-center py-5">Our Trusted Clients</h3>
+        </div>
+        <div className="flex flex-wrap justify-center items-center">
+          <img className="h-12 w-auto mx-3 my-5" src={brand1} alt="Brand 1" />
+          <img className="h-12 w-auto mx-3 my-5" src={brand2} alt="Brand 2" />
+          <img className="h-12 w-auto mx-3 my-5" src={brand3} alt="Brand 3" />
+          <img className="h-12 w-auto mx-3 my-5" src={brand4} alt="Brand 4" />
         </div>
       </div>
     </div>
