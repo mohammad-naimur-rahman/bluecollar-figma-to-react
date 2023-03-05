@@ -109,7 +109,7 @@ const PriceAndPlan = () => {
           <div className="pl-4">
             <h6 className="text-secondary">Affordable PRice</h6>
             <p className="text-gray">
-              lacinia, tempor lacus at, eleifend diam. Maecenas tempus tincidunt placeratneque, maximus mattis{' '}
+              lacinia, tempor lacus at, eleifend diam. Maecenas tempus tincidunt placeratneque, maximus mattis
             </p>
           </div>
         </div>
@@ -119,7 +119,7 @@ const PriceAndPlan = () => {
           <div className="pl-4">
             <h6 className="text-secondary">Affordable PRice</h6>
             <p className="text-gray">
-              lacinia, tempor lacus at, eleifend diam. Maecenas tempus tincidunt placeratneque, maximus mattis{' '}
+              lacinia, tempor lacus at, eleifend diam. Maecenas tempus tincidunt placeratneque, maximus mattis
             </p>
           </div>
         </div>

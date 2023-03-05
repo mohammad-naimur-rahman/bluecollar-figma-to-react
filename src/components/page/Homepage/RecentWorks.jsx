@@ -10,7 +10,7 @@ const GalleryCard = ({ img, title, description }) => {
   return (
     <div className="p-4 w-1/4 text-center cursor-pointer">
       <div className="p-5 bg-white">
-        <img src={img} alt={title} className="w-full h-auto" />
+        <img src={img} alt={title} className="w-full h-auto object-cover" />
         <h6 className="text-secondary pt-4 pb-1">{title}</h6>
         <p className="text-gray">{description}</p>
       </div>

@@ -7,6 +7,7 @@ import WhyChooseUs from '@components/page/Homepage/WhyChooseUs.jsx'
 import RecentWorks from '@components/page/Homepage/RecentWorks.jsx'
 import TestimonialsAndForm from '@components/page/Homepage/TestimonialsAndForm.jsx'
 import PriceAndPlan from '@components/page/Homepage/PriceAndPlan.jsx'
+import BlogAndArticles from '@components/page/Homepage/BlogAndArticles.jsx'
 
 const Homepage = () => {
   return (
@@ -19,6 +20,7 @@ const Homepage = () => {
       <RecentWorks />
       <TestimonialsAndForm />
       <PriceAndPlan />
+      <BlogAndArticles />
     </Layout>
   )
 }
