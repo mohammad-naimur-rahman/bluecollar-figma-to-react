@@ -19,8 +19,58 @@
     "children": [
       {
         "id": 1,
-        "name": "/name",
-        "link": "/"
+        "name": "Service Single",
+        "link": "/services/:service"
+      },
+      {
+        "id": 2,
+        "name": "Blog Single",
+        "link": "/blogs/:id"
+      },
+      {
+        "id": 3,
+        "name": "Gallery",
+        "link": "/gallery"
+      },
+      {
+        "id": 4,
+        "name": "Gallery Single",
+        "link": "/gallery/:id"
+      },
+      {
+        "id": 5,
+        "name": "Pricing",
+        "link": "/pricing"
+      },
+      {
+        "id": 6,
+        "name": "Team",
+        "link": "/team"
+      },
+      {
+        "id": 7,
+        "name": "FAQ",
+        "link": "/faq"
+      },
+      {
+        "id": 8,
+        "name": "Protected",
+        "link": "/protected"
+      },
+      {
+        "id": 9,
+        "name": "Lisences",
+        "link": "/lisences"
+      },
+      {
+        "id": 10,
+        "name": "Changelog",
+        "link": "/changelog"
+      },
+      {
+        "id": 11,
+        "name": "Error Page",
+        "link": "/error"
       }
     ]
   },

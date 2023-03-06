@@ -36,6 +36,7 @@ export default function App() {
         <Route path="protected" element={<ProtectedRoute />} />
         <Route path="lisences" element={<Lisences />} />
         <Route path="changelog" element={<ChangeLog />} />
+        <Route path="error" element={<ErrorPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>

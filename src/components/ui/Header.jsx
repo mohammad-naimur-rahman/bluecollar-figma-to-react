@@ -4,6 +4,7 @@ import Logo from '@assets/Logo.png'
 import navData from '@data/ui/nav.json'
 import NavLinkStyled from './NavLinkStyled'
 import Button from './Button'
+import { RxCaretDown } from 'react-icons/rx'
 
 const HeaderInforCard = ({ logo, title, description }) => {
   return (
@@ -54,10 +55,26 @@ const Header = () => {
 
       <nav className="flex items-center justify-between bg-primary container py-3 absolute -translate-x-1/2 left-1/2 -bottom-14">
         <ul className="flex items-center">
-          {navData?.map(({ id, name, link, hasChildren }) => (
+          {navData?.map(({ id, name, link, hasChildren, children }) => (
             <li key={id}>
               {hasChildren ? (
-                <span className="mx-6">Pages</span>
+                <div className="relative group">
+                  <div className="mx-6 cursor-pointer flex items-center">
+                    <p className="mr-2">Pages</p>
+                    <span className="text-xl mt-1">
+                      <RxCaretDown />
+                    </span>
+                  </div>
+                  <ul className="absolute bg-primary top-[calc(100%_+_20px)] left-1/2 -translate-x-1/2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all">
+                    {children.map(({ id, name, link }) => (
+                      <li key={id} className="py-2">
+                        <NavLinkStyled to={link} className="mx-6 w-[max-content] inline-block">
+                          {name}
+                        </NavLinkStyled>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ) : (
                 <NavLinkStyled to={link} className="mx-6">
                   {name}
