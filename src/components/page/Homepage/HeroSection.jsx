@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <header className={classNames(styles.header)}>
       <div className="container text-white flex items-center justify-start h-full">
-        <div className="w-[600px]">
+        <div className="w-[600px] md:w-full">
           <div
             className={classNames(styles['header-transparent'], 'px-2 inline-flex items-center justify-center py-1')}
           >

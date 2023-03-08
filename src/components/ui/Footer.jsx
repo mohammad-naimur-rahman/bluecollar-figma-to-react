@@ -44,13 +44,13 @@ const socialIcons = [
 
 const InforCard = ({ logo, title, description }) => {
   return (
-    <div className="flex items-center ml-6">
+    <div className="flex items-center ml-6 lg:ml-0">
       <div className="bg-primary w-14 h-14 lg:w-12 lg:h-12 rounded-full flex items-center justify-center">
         <div className="text-lg">{logo}</div>
       </div>
       <div className="ml-1.5">
-        <h6 className="text-white">{title}</h6>
-        <p className="text-white text-sm">{description}</p>
+        <h6 className="text-white md:text-base">{title}</h6>
+        <p className="text-white text-sm md:text-xs">{description}</p>
       </div>
     </div>
   )
@@ -94,17 +94,17 @@ const Footer = () => {
 
         <div className="container h-[1px] bg-white bg-opacity-30 my-6" />
 
-        <div className="container flex text-white">
-          <div className="w-[40%]">
+        <div className="container flex md:flex-col text-white">
+          <div className="w-[40%] md:w-full">
             <p className="font-thin">
               Denouncing pleasure and praising pain was born and I will givg you a coghmplete acchount of the system,
               and expound the actual
             </p>
-            <div className="flex py-10">
+            <div className="flex py-10 md:justify-center md:w-full">
               {socialIcons.map(({ id, icon }) => (
                 <div
                   key={id}
-                  className="bg-white bg-opacity-30 rounded-full w-12 h-12 mr-4 cursor-pointer flex justify-center items-center"
+                  className="bg-white bg-opacity-30 rounded-full w-12 h-12 mr-4 md:mr-0 md:mx-5 cursor-pointer flex justify-center items-center"
                 >
                   {icon}
                 </div>
@@ -114,8 +114,8 @@ const Footer = () => {
 
           <div className="h-90 w-[1px] bg-white bg-opacity-30 ml-5" />
 
-          <div className="w-[40%]">
-            <div className="flex justify-around">
+          <div className="w-[40%] md:w-full">
+            <div className="flex md:flex-col justify-around md:ml-20">
               <ul>
                 <li className="font-normal pb-2">Explore</li>
                 <li className="font-thin text-base cursor-pointer pb-2">About Us</li>
@@ -124,6 +124,9 @@ const Footer = () => {
                 <li className="font-thin text-base cursor-pointer pb-2">Pricing</li>
                 <li className="font-thin text-base cursor-pointer pb-2">FAQ</li>
               </ul>
+
+              <div className="hidden md:block w-full h-[1px] bg-white bg-opacity-30 my-7" />
+
               <ul>
                 <li className="font-normal pb-2">Quick Links</li>
                 <li className="font-thin text-base cursor-pointer pb-2">Services</li>
@@ -132,13 +135,15 @@ const Footer = () => {
                 <li className="font-thin text-base cursor-pointer pb-2">Service Request</li>
                 <li className="font-thin text-base cursor-pointer pb-2">Estimation Calculator</li>
               </ul>
+
+              <div className="hidden md:block w-full h-[1px] bg-white bg-opacity-30 my-7" />
             </div>
           </div>
 
           <div className="h-90 w-[1px] bg-white bg-opacity-30 mr-10" />
 
-          <div className="w-[20%]">
-            <ul>
+          <div className="w-[20%]  md:ml-20">
+            <ul className="md:mx-auto">
               <li className="font-normal pb-2">Utility Pages</li>
               <li className="font-thin text-base cursor-pointer pb-2">Style Guide</li>
               <li className="font-thin text-base cursor-pointer pb-2">Changelog</li>

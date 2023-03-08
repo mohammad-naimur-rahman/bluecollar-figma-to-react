@@ -81,10 +81,10 @@ const TestimonialsAndForm = () => {
           <h3 className="text-secondary text-center py-5">Our Trusted Clients</h3>
         </div>
         <div className="flex flex-wrap justify-center items-center">
-          <img className="h-12 lg:h-10 w-auto mx-3 my-5" src={brand1} alt="Brand 1" />
-          <img className="h-12 lg:h-10 w-auto mx-3 my-5" src={brand2} alt="Brand 2" />
-          <img className="h-12 lg:h-10 w-auto mx-3 my-5" src={brand3} alt="Brand 3" />
-          <img className="h-12 lg:h-10 w-auto mx-3 my-5" src={brand4} alt="Brand 4" />
+          <img className="h-12 lg:h-10 md:h-8 w-auto mx-3 my-5" src={brand1} alt="Brand 1" />
+          <img className="h-12 lg:h-10 md:h-8 w-auto mx-3 my-5" src={brand2} alt="Brand 2" />
+          <img className="h-12 lg:h-10 md:h-8 w-auto mx-3 my-5" src={brand3} alt="Brand 3" />
+          <img className="h-12 lg:h-10 md:h-8 w-auto mx-3 my-5" src={brand4} alt="Brand 4" />
         </div>
       </div>
     </div>

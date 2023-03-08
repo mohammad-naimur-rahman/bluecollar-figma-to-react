@@ -44,7 +44,7 @@ const services = [
 const OurServices = () => {
   return (
     <div className="container py-28 xl:py-24 lg:py-20 md:py-16 sm:py-12">
-      <div className="w-[60%] text-center flex flex-col justify-center items-center mx-auto">
+      <div className="w-[60%] lg:w-[80%] md:w-full text-center flex flex-col justify-center items-center mx-auto">
         <Heading img={servicesIcon} title="Our Services" bg="bg-white" />
         <h2 className="text-secondary py-3">Our Services</h2>
         <p className="text-gray">
@@ -57,7 +57,7 @@ const OurServices = () => {
         {services.map(({ id, img, title }) => (
           <section
             key={id}
-            className="w-[calc(33%_-_12px)] lg:w-[calc(33%_-_6px)] xl:w-[30%] px-9 py-12 lg:px-5 lg:py-5 bg-secondary flex flex-col items-start justify-between"
+            className="w-[calc(33%_-_12px)] lg:w-[calc(33%_-_6px)] xl:w-[30%] md:w-[45%] px-9 py-12 lg:px-5 lg:py-5 bg-secondary flex flex-col items-start justify-between"
           >
             <div>
               <img src={img} alt={title} className="w-12 h-auto" />

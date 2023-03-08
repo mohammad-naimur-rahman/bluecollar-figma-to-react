@@ -57,12 +57,12 @@ const plans = [
 const PriceAndPlan = () => {
   return (
     <div className="container py-40 xl:py-36 lg:py-32 md:py-28 sm:py-24">
-      <div className="flex items-center justify-between">
-        <div className="w-1/2">
+      <div className="flex md:flex-col items-center justify-between">
+        <div className="w-1/2 md:w-full">
           <Heading img={icon} title="Price and Plan" bg="bg-white" />
           <h2 className="text-secondary py-3 xl:text-[30px]">Let’s Customize Work With Affordable Price</h2>
         </div>
-        <p className="text-gray w-1/2">
+        <p className="text-gray w-1/2 md:w-full md:pb-5">
           Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium metus. Proin
           pretium id urna sit amet tincidunt. Interdum et malesuada.
         </p>
@@ -110,7 +110,7 @@ const PriceAndPlan = () => {
         <div className="flex items-start justify-start">
           <img src={tick} alt="tick" className="w-8 h-auto mt-1" />
           <div className="pl-4">
-            <h6 className="text-secondary">Affordable PRice</h6>
+            <h6 className="text-secondary">Affordable Price</h6>
             <p className="text-gray">
               lacinia, tempor lacus at, eleifend diam. Maecenas tempus tincidunt placeratneque, maximus mattis
             </p>
@@ -120,7 +120,7 @@ const PriceAndPlan = () => {
         <div className="flex items-start justify-start">
           <img src={tick} alt="tick" className="w-8 h-auto mt-1" />
           <div className="pl-4">
-            <h6 className="text-secondary">Affordable Price</h6>
+            <h6 className="text-secondary">Fixed Plan</h6>
             <p className="text-gray">
               lacinia, tempor lacus at, eleifend diam. Maecenas tempus tincidunt placeratneque, maximus mattis
             </p>
