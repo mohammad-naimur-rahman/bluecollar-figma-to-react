@@ -31,8 +31,8 @@ const StatisticsCard = ({ qty, title }) => {
 
 const WhyChooseUs = () => {
   return (
-    <div className="flex bg-white">
-      <div className="w-[45%] relative">
+    <div className="flex bg-white lg:flex-col">
+      <div className="w-[45%] relative lg:w-full">
         <img src={whyChooseUsImg} alt="Statistics" className="h-full w-auto object-cover" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  px-24 xl:px-12 py-40 xl:py-20 bg-secondary bg-opacity-70 backdrop-blur-md">
           <StatisticsCard qty={3956} title="Projects Done" />
@@ -41,7 +41,7 @@ const WhyChooseUs = () => {
           <StatisticsCard qty="854+" title="Happy Customers" />
         </div>
       </div>
-      <div className="w-[55%]">
+      <div className="w-[55%] lg:w-full">
         <div className="w-[645px] xl:w-full pl-20 xl:px-8 py-36 xl:py-10">
           <Heading img={whyChooseUsIcon} title="Why Choose Us" />
           <h2 className="text-secondary">Few Reasons Why You Should Choose Us</h2>

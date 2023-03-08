@@ -53,11 +53,11 @@ const OurServices = () => {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center my-9 gap-6">
+      <div className="flex flex-wrap justify-center my-9 gap-6 lg:gap-3">
         {services.map(({ id, img, title }) => (
           <section
             key={id}
-            className="w-[calc(33%_-_12px)] xl:w-[30%] px-9 py-12 bg-secondary flex flex-col items-start justify-between"
+            className="w-[calc(33%_-_12px)] lg:w-[calc(33%_-_6px)] xl:w-[30%] px-9 py-12 lg:px-5 lg:py-5 bg-secondary flex flex-col items-start justify-between"
           >
             <div>
               <img src={img} alt={title} className="w-12 h-auto" />

@@ -8,8 +8,8 @@ import { RxCaretDown } from 'react-icons/rx'
 
 const HeaderInforCard = ({ logo, title, description }) => {
   return (
-    <div className="flex items-center ml-6">
-      <div className="bg-primary w-14 h-14 rounded-full flex items-center justify-center">
+    <div className="flex items-center ml-6 lg:ml-4">
+      <div className="bg-primary w-14 lg:w-12 h-14 lg:h-12 rounded-full flex items-center justify-center">
         <div className="text-lg">{logo}</div>
       </div>
       <div className="ml-1.5">
@@ -23,7 +23,7 @@ const HeaderInforCard = ({ logo, title, description }) => {
 const Header = () => {
   return (
     <header className="relative">
-      <div className="py-5 bg-bg-secondary">
+      <div className="py-5 lg:py-3 bg-bg-secondary">
         <div className="container flex items-center justify-between">
           <p>Opening Hours: 06:00 to 20:00</p>
           <ul className="flex">
@@ -43,7 +43,7 @@ const Header = () => {
         </div>
       </div>
 
-      <section className="flex flex-col bg-white pt-7 pb-12">
+      <section className="flex flex-col bg-white pt-7 lg:pt-4 pb-12 lg:pb-8">
         <div className="flex items-center justify-between container">
           <img src={Logo} alt="BlueCollar" className="w-60 h-auto" />
           <div className="flex">
@@ -59,7 +59,7 @@ const Header = () => {
             <li key={id}>
               {hasChildren ? (
                 <div className="relative group">
-                  <div className="mx-6 cursor-pointer flex items-center">
+                  <div className="mx-6 lg:mx-2 cursor-pointer flex items-center">
                     <p className="mr-2">Pages</p>
                     <span className="text-xl mt-1">
                       <RxCaretDown />
@@ -76,7 +76,7 @@ const Header = () => {
                   </ul>
                 </div>
               ) : (
-                <NavLinkStyled to={link} className="mx-6">
+                <NavLinkStyled to={link} className="mx-6 lg:mx-2">
                   {name}
                 </NavLinkStyled>
               )}

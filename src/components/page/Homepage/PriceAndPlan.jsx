@@ -68,9 +68,9 @@ const PriceAndPlan = () => {
         </p>
       </div>
 
-      <div className="flex gap-6 xl:gap-0 justify-between flex-wrap">
+      <div className="flex gap-6 xl:gap-0 lg:gap-6 justify-between lg:justify-center flex-wrap">
         {plans.map(({ id, name, price, popular, items }) => (
-          <div key={id} className="w-[calc(33%_-_12px)]">
+          <div key={id} className="w-[calc(33%_-_12px)] lg:w-[calc(50%_-_12px)]">
             <div className="p-10 xl:p-5 bg-white h-full flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between">
@@ -120,7 +120,7 @@ const PriceAndPlan = () => {
         <div className="flex items-start justify-start">
           <img src={tick} alt="tick" className="w-8 h-auto mt-1" />
           <div className="pl-4">
-            <h6 className="text-secondary">Affordable PRice</h6>
+            <h6 className="text-secondary">Affordable Price</h6>
             <p className="text-gray">
               lacinia, tempor lacus at, eleifend diam. Maecenas tempus tincidunt placeratneque, maximus mattis
             </p>

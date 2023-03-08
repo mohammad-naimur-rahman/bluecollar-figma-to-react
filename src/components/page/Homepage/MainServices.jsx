@@ -30,7 +30,7 @@ const MainServices = () => {
   return (
     <div className={styles['main-services']}>
       <div className="container">
-        <div className="flex flex-col justify-center items-center text-center w-[60%] xl:w-[70%] mx-auto pt-20">
+        <div className="flex flex-col justify-center items-center text-center w-[60%] xl:w-[70%] lg:w-[90%] mx-auto pt-20">
           <h2 className="text-secondary">Professional Main Services</h2>
           <p className="text-secondary pt-4 xl:pt-2">
             Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium metus. Proin
@@ -44,8 +44,8 @@ const MainServices = () => {
           </div>
         </div>
 
-        <div className="container bg-white p-10 xl:p-8 flex justify-between">
-          <div className="w-[60%]">
+        <div className="container bg-white p-10 xl:p-8 flex lg:flex-col justify-between">
+          <div className="w-[60%] lg:w-full lg:order-2 lg:mt-5">
             <Heading img={fourth} title="Based on Commercial" className="mb-2" />
             <h3>Commercial</h3>
             <p className="pt-2 pb-4 text-gray">
@@ -58,7 +58,11 @@ const MainServices = () => {
             </p>
             <Button variant="primary">Read More</Button>
           </div>
-          <img src={servicesHero} alt="Services" className="w-[40%] grayscale hover:grayscale-0 transition-all" />
+          <img
+            src={servicesHero}
+            alt="Services"
+            className="w-[40%] lg:w-full grayscale hover:grayscale-0 transition-all lg:order-1"
+          />
         </div>
       </div>
     </div>

@@ -15,8 +15,8 @@ import Button from '../../ui/Button'
 const TestimonialsAndForm = () => {
   return (
     <div className="bg-white">
-      <div className="container flex gap-10 pt-40 xl:py-36 lg:py-32 md:py-28 sm:py-24">
-        <div className="w-1/2">
+      <div className="container flex lg:flex-col gap-10 pt-40 xl:py-36 lg:py-32 md:py-28 sm:py-24">
+        <div className="w-1/2 lg:w-full">
           <Heading img={icon} title="Testimonials" />
           <h3 className="pt-1 pb-5">Customers Say</h3>
 
@@ -62,7 +62,7 @@ const TestimonialsAndForm = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="w-1/2 lg:w-full lg:pt-10">
           <Heading img={icon} title="Meet Us" />
           <h3 className="pt-1 pb-5">Appointment Form</h3>
           <form className="p-10 bg-bg flex flex-col items-stretch h-[calc(100%_-_120px)]">
@@ -81,10 +81,10 @@ const TestimonialsAndForm = () => {
           <h3 className="text-secondary text-center py-5">Our Trusted Clients</h3>
         </div>
         <div className="flex flex-wrap justify-center items-center">
-          <img className="h-12 w-auto mx-3 my-5" src={brand1} alt="Brand 1" />
-          <img className="h-12 w-auto mx-3 my-5" src={brand2} alt="Brand 2" />
-          <img className="h-12 w-auto mx-3 my-5" src={brand3} alt="Brand 3" />
-          <img className="h-12 w-auto mx-3 my-5" src={brand4} alt="Brand 4" />
+          <img className="h-12 lg:h-10 w-auto mx-3 my-5" src={brand1} alt="Brand 1" />
+          <img className="h-12 lg:h-10 w-auto mx-3 my-5" src={brand2} alt="Brand 2" />
+          <img className="h-12 lg:h-10 w-auto mx-3 my-5" src={brand3} alt="Brand 3" />
+          <img className="h-12 lg:h-10 w-auto mx-3 my-5" src={brand4} alt="Brand 4" />
         </div>
       </div>
     </div>

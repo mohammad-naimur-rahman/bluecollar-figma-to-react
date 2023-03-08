@@ -10,7 +10,7 @@ const Heading = ({ img, title, className, textClassName, imageSize = 'w-5', bg }
         {
           'bg-bg': !bg
         },
-        'inline-flex px-5 py-2 justify-center items-center'
+        'inline-flex px-5 lg:px-2 py-2 lg:py-1 justify-center items-center'
       )}
     >
       <img src={img} alt={title} className={imageSize} />
