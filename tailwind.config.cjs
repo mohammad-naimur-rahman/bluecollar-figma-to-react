@@ -4,8 +4,13 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: {
-        DEFAULT: 0
+      margin: {
+        DEFAULT: '2rem',
+        sm: '1rem',
+        md: '1rem',
+        lg: '1rem',
+        xl: '1rem',
+        xxl: '1rem'
       }
     },
     colors: {
@@ -22,23 +27,11 @@ module.exports = {
       black: '#2F2F2F'
     },
     screens: {
-      // sm: '480px',
-      // md: '576px',
-      // lg: '768px',
-      // xl: '992px',
-      // xxl: '1200px'
-
       xl: { max: '1200px' },
-      // => @media (max-width: 1279px) { ... }
-
       lg: { max: '992px' },
-      // => @media (max-width: 1023px) { ... }
-
       md: { max: '768px' },
-      // => @media (max-width: 767px) { ... }
-
-      sm: { max: '640px' }
-      // => @media (max-width: 639px) { ... }
+      sm: { max: '640px' },
+      xsm: { max: '480px' }
     },
     fontFamily: {
       'font-primary': ['Mulish', 'sans-serif']

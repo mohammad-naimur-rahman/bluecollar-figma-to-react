@@ -30,21 +30,21 @@ const MainServices = () => {
   return (
     <div className={styles['main-services']}>
       <div className="container">
-        <div className="flex flex-col justify-center items-center text-center w-[60%] mx-auto pt-20">
+        <div className="flex flex-col justify-center items-center text-center w-[60%] xl:w-[70%] mx-auto pt-20">
           <h2 className="text-secondary">Professional Main Services</h2>
-          <p className="text-secondary pt-4">
+          <p className="text-secondary pt-4 xl:pt-2">
             Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium metus. Proin
             pretium id urna sit amet tincidunt.
           </p>
 
-          <div className="flex items-center justify-between w-full py-10">
+          <div className="flex items-center justify-between w-full py-10 xl:py-7">
             <NavButton img={first} title="Commercial" className="bg-white border-2 border-white" />
             <NavButton img={second} title="Residential" className="bg-primary" />
             <NavButton img={third} title="Industrial" className="bg-primary" />
           </div>
         </div>
 
-        <div className="container bg-white p-10 flex justify-between items-center">
+        <div className="container bg-white p-10 xl:p-8 flex justify-between">
           <div className="w-[60%]">
             <Heading img={fourth} title="Based on Commercial" className="mb-2" />
             <h3>Commercial</h3>

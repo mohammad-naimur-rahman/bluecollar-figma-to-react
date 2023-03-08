@@ -23,8 +23,11 @@ export default function App() {
       <Route path="/" element={<Wrapper />}>
         <Route index element={<Homepage />} />
         <Route path="about-us" element={<AboutUs />} />
-        <Route path="services" element={<Services />} />
-        <Route path="services/:service" element={<Service />} />
+        {/* <Route path="services" element={<Services />} />
+        <Route path="services/:service" element={<Service />} /> */}
+        <Route path="services" element={<Services />}>
+          <Route path=":service" element={<Service />} />
+        </Route>
         <Route path="blogs/:id" element={<Blog />} />
         <Route path="gallery" element={<Gallery />} />
         <Route path="gallery/:id" element={<GallerySingle />} />

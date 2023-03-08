@@ -15,7 +15,7 @@ import Button from '../../ui/Button'
 const TestimonialsAndForm = () => {
   return (
     <div className="bg-white">
-      <div className="container flex gap-10 pt-40">
+      <div className="container flex gap-10 pt-40 xl:py-36 lg:py-32 md:py-28 sm:py-24">
         <div className="w-1/2">
           <Heading img={icon} title="Testimonials" />
           <h3 className="pt-1 pb-5">Customers Say</h3>
@@ -75,7 +75,7 @@ const TestimonialsAndForm = () => {
           </form>
         </div>
       </div>
-      <div className="container pt-20 pb-40">
+      <div className="container pt-20 xl:pt-10 pb-40 xl:pb-20">
         <div className="flex flex-col justify-center">
           <Heading img={icon} title="Clients" className="self-center" />
           <h3 className="text-secondary text-center py-5">Our Trusted Clients</h3>

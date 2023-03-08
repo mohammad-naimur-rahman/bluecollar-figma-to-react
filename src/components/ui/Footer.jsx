@@ -59,7 +59,7 @@ const InforCard = ({ logo, title, description }) => {
 const Footer = () => {
   return (
     <footer>
-      <div className="bg-primary py-28">
+      <div className="bg-primary py-28 xl:py-24 lg:py-20 md:py-16 sm:py-12">
         <div className="container flex items-center justify-between gap-20">
           <div className="text-secondary">
             <h2>Subscribe Our Newsletter</h2>

@@ -5,7 +5,19 @@
 
 @layer base {
   .container {
-    @apply max-w-[1200px] xl:max-w-[992px] lg:max-w-[768px] md:max-w-[640px];
+    @apply max-w-[1200px] px-8 xl:max-w-[992px] xl:px-6 lg:max-w-[768px] lg:px-5 md:max-w-[640px] md:px-4 sm:max-w-[480px];
+  }
+}
+
+@mixin mq($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin mqh {
+  @media (hover) {
+    @content;
   }
 }
 
@@ -29,26 +41,146 @@ h6 {
 
 h1 {
   font-size: 60px;
+
+  @include mq($xl) {
+    font-size: 50px;
+  }
+
+  @include mq($lg) {
+    font-size: 45px;
+  }
+
+  @include mq($md) {
+    font-size: 40px;
+  }
+
+  @include mq($sm) {
+    font-size: 35px;
+  }
+
+  @include mq($xsm) {
+    font-size: 30px;
+  }
 }
 
 h2 {
   font-size: 50px;
+
+  @include mq($xl) {
+    font-size: 50px;
+  }
+
+  @include mq($lg) {
+    font-size: 35px;
+  }
+
+  @include mq($md) {
+    font-size: 30px;
+  }
+
+  @include mq($sm) {
+    font-size: 25px;
+  }
+
+  @include mq($xsm) {
+    font-size: 20px;
+  }
 }
 
 h3 {
   font-size: 35px;
+
+  @include mq($xl) {
+    font-size: 30px;
+  }
+
+  @include mq($lg) {
+    font-size: 25px;
+  }
+
+  @include mq($md) {
+    font-size: 22px;
+  }
+
+  @include mq($sm) {
+    font-size: 20px;
+  }
+
+  @include mq($xsm) {
+    font-size: 20px;
+  }
 }
 
 h4 {
   font-size: 30px;
+
+  @include mq($xl) {
+    font-size: 28px;
+  }
+
+  @include mq($lg) {
+    font-size: 25px;
+  }
+
+  @include mq($md) {
+    font-size: 23px;
+  }
+
+  @include mq($sm) {
+    font-size: 21px;
+  }
+
+  @include mq($xsm) {
+    font-size: 20px;
+  }
 }
 
 h5 {
   font-size: 25px;
+
+  @include mq($xl) {
+    font-size: 24px;
+  }
+
+  @include mq($lg) {
+    font-size: 23px;
+  }
+
+  @include mq($md) {
+    font-size: 22px;
+  }
+
+  @include mq($sm) {
+    font-size: 21px;
+  }
+
+  @include mq($xsm) {
+    font-size: 20px;
+  }
 }
 
 h6 {
   font-size: 22px;
+
+  @include mq($xl) {
+    font-size: 21px;
+  }
+
+  @include mq($lg) {
+    font-size: 21px;
+  }
+
+  @include mq($md) {
+    font-size: 20px;
+  }
+
+  @include mq($sm) {
+    font-size: 19px;
+  }
+
+  @include mq($xsm) {
+    font-size: 19px;
+  }
 }
 
 p,
@@ -63,16 +195,12 @@ td,
 th,
 textarea {
   font-size: 18px;
-}
 
-@mixin mq($width) {
-  @media only screen and (min-width: $width) {
-    @content;
+  @include mq($xl) {
+    font-size: 17px;
   }
-}
 
-@mixin mqh {
-  @media (hover) {
-    @content;
+  @inclue mq($lg) {
+    font-size: 16px;
   }
 }

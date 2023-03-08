@@ -5,10 +5,12 @@ import Heading from '../../ui/Heading'
 
 const SecondSection = () => {
   return (
-    <div className="bg-white py-32">
-      <div className="container flex items-center">
-        <img src={image} alt="we-provide-your-future" />
-        <div className="p-10 h-full">
+    <div className="bg-white py-32 xl:py-28 lg:py-24 md:py-20 sm:py-16">
+      <div className="container flex items-stretch justify-between">
+        <div className="w-1/2 xl:w-[45%]">
+          <img src={image} alt="we-provide-your-future" className="w-full h-full object-cover" />
+        </div>
+        <div className="p-10 h-full w-1/2 xl:w-[55%]">
           <Heading img={icon} title="Welcome BlueCollar" />
           <h2 className="text-secondary">We Provide Your Future</h2>
           <p className="text-gray py-3">

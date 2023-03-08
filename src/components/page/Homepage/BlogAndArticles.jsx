@@ -28,7 +28,7 @@ const blogs = [
 
 const BlogAndArticles = () => {
   return (
-    <section className="py-32 bg-white">
+    <section className="py-32 xl:py-28 lg:py-24 md:py-20 sm:md-16 bg-white">
       <div className="container">
         <div className="flex flex-col justify-center items-center">
           <Heading img={icon} title="Blog & Articles" />

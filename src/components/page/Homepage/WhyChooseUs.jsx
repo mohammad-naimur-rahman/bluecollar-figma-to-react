@@ -34,7 +34,7 @@ const WhyChooseUs = () => {
     <div className="flex bg-white">
       <div className="w-[45%] relative">
         <img src={whyChooseUsImg} alt="Statistics" className="h-full w-auto object-cover" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  px-28 py-44 bg-secondary bg-opacity-70 backdrop-blur-md">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  px-24 xl:px-12 py-40 xl:py-20 bg-secondary bg-opacity-70 backdrop-blur-md">
           <StatisticsCard qty={3956} title="Projects Done" />
           <StatisticsCard qty={851} title="People Working" />
           <StatisticsCard qty={265} title="Business Partners" />
@@ -42,7 +42,7 @@ const WhyChooseUs = () => {
         </div>
       </div>
       <div className="w-[55%]">
-        <div className="w-[645px] pl-20 py-36">
+        <div className="w-[645px] xl:w-full pl-20 xl:px-8 py-36 xl:py-10">
           <Heading img={whyChooseUsIcon} title="Why Choose Us" />
           <h2 className="text-secondary">Few Reasons Why You Should Choose Us</h2>
           <p className="text-gray py-3">

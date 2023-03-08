@@ -43,7 +43,7 @@ const services = [
 
 const OurServices = () => {
   return (
-    <div className="container py-28">
+    <div className="container py-28 xl:py-24 lg:py-20 md:py-16 sm:py-12">
       <div className="w-[60%] text-center flex flex-col justify-center items-center mx-auto">
         <Heading img={servicesIcon} title="Our Services" bg="bg-white" />
         <h2 className="text-secondary py-3">Our Services</h2>
@@ -53,14 +53,19 @@ const OurServices = () => {
         </p>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center my-9 gap-6">
+      <div className="flex flex-wrap justify-center my-9 gap-6">
         {services.map(({ id, img, title }) => (
-          <section key={id} className="w-[calc(33%_-_12px)] px-9 py-12 bg-secondary">
-            <img src={img} alt={title} className="w-12 h-auto" />
-            <h5 className="text-primary py-2">{title}</h5>
-            <p className="text-white-dark">
-              Sagittis Nulla facilisi. In sed pretium metus. Proin pretium Turna sit amet tincidunt.
-            </p>
+          <section
+            key={id}
+            className="w-[calc(33%_-_12px)] xl:w-[30%] px-9 py-12 bg-secondary flex flex-col items-start justify-between"
+          >
+            <div>
+              <img src={img} alt={title} className="w-12 h-auto" />
+              <h5 className="text-primary py-2">{title}</h5>
+              <p className="text-white-dark">
+                Sagittis Nulla facilisi. In sed pretium metus. Proin pretium Turna sit amet tincidunt.
+              </p>
+            </div>
             <button className="text-white pt-5 font-bold">Read More</button>
           </section>
         ))}

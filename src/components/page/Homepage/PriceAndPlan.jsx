@@ -56,11 +56,11 @@ const plans = [
 
 const PriceAndPlan = () => {
   return (
-    <div className="container py-40">
+    <div className="container py-40 xl:py-36 lg:py-32 md:py-28 sm:py-24">
       <div className="flex items-center justify-between">
         <div className="w-1/2">
           <Heading img={icon} title="Price and Plan" bg="bg-white" />
-          <h2 className="text-secondary py-3">Let’s Customize Work With Affordable Price</h2>
+          <h2 className="text-secondary py-3 xl:text-[30px]">Let’s Customize Work With Affordable Price</h2>
         </div>
         <p className="text-gray w-1/2">
           Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium metus. Proin
@@ -68,34 +68,37 @@ const PriceAndPlan = () => {
         </p>
       </div>
 
-      <div className="flex gap-6 items-center justify-between flex-wrap">
+      <div className="flex gap-6 xl:gap-0 justify-between flex-wrap">
         {plans.map(({ id, name, price, popular, items }) => (
           <div key={id} className="w-[calc(33%_-_12px)]">
-            <div className="p-10 bg-white">
-              <div className="flex items-center justify-between">
-                <div className="flex flex-col text-secondary">
-                  <h6>{name}</h6>
-                  <h4>${price}</h4>
+            <div className="p-10 xl:p-5 bg-white h-full flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between">
+                  <div className="flex flex-col text-secondary">
+                    <h6>{name}</h6>
+                    <h4>${price}</h4>
+                  </div>
+                  <div
+                    className={classNames({
+                      'flex flex-col justify-center items-center': popular
+                    })}
+                  >
+                    {popular ? <span className="bg-primary text-secondary px-3 py-1 mb-2">POPULAR</span> : null}
+                    <p className="text-gray">Per Visit Charge</p>
+                  </div>
                 </div>
-                <div
-                  className={classNames({
-                    'flex flex-col justify-center items-center': popular
-                  })}
-                >
-                  {popular ? <span className="bg-primary text-secondary px-3 py-1 mb-2">POPULAR</span> : null}
-                  <p className="text-gray">Per Visit Charge</p>
-                </div>
+
+                <div className="w-full h-[1px] bg-gray bg-opacity-30 my-5"></div>
+
+                {items.map(el => (
+                  <div key={el} className="flex items-center justify-start py-3">
+                    <img src={yellowTick} alt="Tick" className="w-5 h-auto mr-3" />
+                    <p className="text-gray">{el}</p>
+                  </div>
+                ))}
               </div>
 
-              <div className="w-full h-[1px] bg-gray bg-opacity-30 my-5"></div>
-
-              {items.map(el => (
-                <div key={el} className="flex items-center justify-start py-3">
-                  <img src={yellowTick} alt="Tick" className="w-5 h-auto mr-3" />
-                  <p className="text-gray">{el}</p>
-                </div>
-              ))}
-              <Button className="w-full mt-8" variant={popular ? 'white' : 'primary'}>
+              <Button className="w-full mt-8 self-end" variant={popular ? 'white' : 'primary'}>
                 Buy Now
               </Button>
             </div>
