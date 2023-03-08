@@ -20,17 +20,17 @@ const TestimonialsAndForm = () => {
           <Heading img={icon} title="Testimonials" />
           <h3 className="pt-1 pb-5">Customers Say</h3>
 
-          <div className="border-[1px] border-gray border-opacity-30 p-8">
+          <div className="border-[1px] border-gray border-opacity-30 p-8 sm:p-4 xxsm:p-2">
             <div className="flex justify-between items-center">
               <div className="flex justify-center items-center">
-                <img src={testimonial1} alt="Nancy Luther" className="w-[70px] h-auto" />
+                <img src={testimonial1} alt="Nancy Luther" className="w-[70px] sm:w-[50px] h-auto" />
                 <div className="pl-3">
                   <p className="text-secondary font-bold">Nancy Luther</p>
-                  <p className="text-gray text-sm pt-2">NewYork</p>
+                  <p className="text-gray text-sm pt-2 xsm:pt-0">NewYork</p>
                 </div>
               </div>
-              <div className="bg-primary w-14 h-14 rounded-full flex justify-center items-center">
-                <img src={quote} alt="quote" />
+              <div className="bg-primary w-14 h-14 sm:w-10 sm:h-10 rounded-full flex justify-center items-center">
+                <img src={quote} alt="quote" className="sm:w-5 h-auto" />
               </div>
             </div>
             <div className="w-full h-[1px] bg-gray bg-opacity-30 my-7"></div>
@@ -49,7 +49,7 @@ const TestimonialsAndForm = () => {
             </div>
           </div>
 
-          <div className="bg-primary p-8 text-secondary mt-5">
+          <div className="bg-primary p-8 sm:p-4 xxsm:p-2 text-secondary mt-5">
             <Heading img={icon} title="Any Question" />
             <h5 className="pt-4 pb-4">99.9% Customer Satisfation Based</h5>
             <p>If you have any questions or need help contact with our team, or call</p>

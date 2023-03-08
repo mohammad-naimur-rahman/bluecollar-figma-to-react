@@ -5,7 +5,7 @@
 
 @layer base {
   .container {
-    @apply max-w-[1200px] px-8 xl:max-w-[992px] xl:px-6 lg:max-w-[768px] lg:px-5 md:max-w-[640px] md:px-4 sm:max-w-[480px];
+    @apply max-w-[1200px] px-8 xl:max-w-[992px] xl:px-6 lg:max-w-[768px] lg:px-5 md:max-w-[640px] md:px-4 sm:max-w-[480px] sm:px-2 xsm:max-w-[400px] xxsm:max-w-[300px];
   }
 }
 
@@ -200,7 +200,11 @@ textarea {
     font-size: 17px;
   }
 
-  @inclue mq($lg) {
+  @include mq($lg) {
+    font-size: 16px;
+  }
+
+  @include mq($xsm) {
     font-size: 16px;
   }
 }

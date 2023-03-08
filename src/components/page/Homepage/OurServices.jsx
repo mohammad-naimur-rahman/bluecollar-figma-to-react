@@ -57,7 +57,7 @@ const OurServices = () => {
         {services.map(({ id, img, title }) => (
           <section
             key={id}
-            className="w-[calc(33%_-_12px)] lg:w-[calc(33%_-_6px)] xl:w-[30%] md:w-[45%] sm:w-full px-9 py-12 lg:px-5 lg:py-5 bg-secondary flex flex-col items-start justify-between sm:mb-3"
+            className="w-[30%] xl:w-[30%] lg:w-[calc(33%_-_6px)] md:w-[45%] sm:w-full px-9 py-12 lg:px-5 lg:py-5 bg-secondary flex flex-col items-start justify-between sm:mb-3"
           >
             <div>
               <img src={img} alt={title} className="w-12 h-auto" />

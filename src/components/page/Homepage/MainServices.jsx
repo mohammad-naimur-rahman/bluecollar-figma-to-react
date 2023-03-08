@@ -13,7 +13,7 @@ const NavButton = ({ img, title, className }) => {
   return (
     <div
       className={classNames(
-        'flex items-center justify-center px-6 py-2 md:px-4 md:py-1 sm:px-2 cursor-pointer border-2 hover:bg-white hover:border-white transition-all',
+        'flex items-center justify-center px-6 py-2 md:px-4 md:py-1 sm:px-2 cursor-pointer border-2 sm:border-[1px] hover:bg-white hover:border-white transition-all xsm:w-full xsm:mb-2',
         className,
         {
           'border-secondary': !className
@@ -37,14 +37,14 @@ const MainServices = () => {
             pretium id urna sit amet tincidunt.
           </p>
 
-          <div className="flex items-center justify-between w-full py-10 xl:py-7">
+          <div className="flex xsm:flex-col items-center justify-between w-full py-10 xl:py-7">
             <NavButton img={first} title="Commercial" className="bg-white border-2 border-white" />
             <NavButton img={second} title="Residential" className="bg-primary" />
             <NavButton img={third} title="Industrial" className="bg-primary" />
           </div>
         </div>
 
-        <div className="container bg-white p-10 xl:p-8 md:p-5 flex lg:flex-col justify-between">
+        <div className="container bg-white p-10 xl:p-8 md:p-5 xsm:p-3 flex lg:flex-col justify-between">
           <div className="w-[60%] lg:w-full lg:order-2 lg:mt-5">
             <Heading img={fourth} title="Based on Commercial" className="mb-2" />
             <h3>Commercial</h3>

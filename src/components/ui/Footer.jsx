@@ -72,10 +72,10 @@ const Footer = () => {
           <div className="flex border-2 border-white">
             <input
               type="email"
-              className="bg-primary placeholder:text-secondary placeholder:text-sm p-3 focus:outline-none text-secondary"
+              className="bg-primary placeholder:text-secondary placeholder:text-sm p-3 xsm:p-2 xsm:w-36 focus:outline-none text-secondary"
               placeholder="Your mail address here"
             />
-            <button className="bg-white text-secondary px-8 font-bold">Subscribe</button>
+            <button className="bg-white text-secondary px-8 xsm:px-4 font-bold">Subscribe</button>
           </div>
         </div>
       </div>
@@ -115,7 +115,7 @@ const Footer = () => {
           <div className="h-90 w-[1px] bg-white bg-opacity-30 ml-5" />
 
           <div className="w-[40%] md:w-full">
-            <div className="flex md:flex-col justify-around md:ml-20">
+            <div className="flex md:flex-col justify-around md:ml-20 sm:ml-10 xsm:ml-0">
               <ul>
                 <li className="font-normal pb-2">Explore</li>
                 <li className="font-thin text-base cursor-pointer pb-2">About Us</li>
@@ -142,7 +142,7 @@ const Footer = () => {
 
           <div className="h-90 w-[1px] bg-white bg-opacity-30 mr-10" />
 
-          <div className="w-[20%]  md:ml-20">
+          <div className="w-[20%]  md:ml-20 sm:ml-10 xsm:ml-0">
             <ul className="md:mx-auto">
               <li className="font-normal pb-2">Utility Pages</li>
               <li className="font-thin text-base cursor-pointer pb-2">Style Guide</li>

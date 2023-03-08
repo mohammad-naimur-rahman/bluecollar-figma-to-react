@@ -70,7 +70,7 @@ const PriceAndPlan = () => {
 
       <div className="flex gap-6 xl:gap-0 lg:gap-6 sm:gap-0 justify-between lg:justify-center flex-wrap">
         {plans.map(({ id, name, price, popular, items }) => (
-          <div key={id} className="w-[calc(33%_-_12px)] lg:w-[calc(50%_-_12px)] sm:w-full sm:mb-5">
+          <div key={id} className="w-[30%] lg:w-[calc(50%_-_12px)] sm:w-full sm:mb-5">
             <div className="p-10 xl:p-5 bg-white h-full flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between">

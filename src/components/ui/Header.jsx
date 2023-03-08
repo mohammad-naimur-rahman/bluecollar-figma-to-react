@@ -9,11 +9,11 @@ import { RxCaretDown, RxCaretRight, RxHamburgerMenu } from 'react-icons/rx'
 const HeaderInforCard = ({ logo, title, description }) => {
   return (
     <div className="flex items-center ml-6 lg:ml-4">
-      <div className="bg-primary w-14 lg:w-12 h-14 lg:h-12 rounded-full flex items-center justify-center">
+      <div className="bg-primary xsm:bg-opacity-0 w-14 lg:w-12 h-14 lg:h-12 xsm:w-5 xsm:h-5 rounded-full flex items-center justify-center">
         <div className="text-lg md:text-base">{logo}</div>
       </div>
       <div className="ml-1.5">
-        <h6 className="text-secondary md:text-lg">{title}</h6>
+        <h6 className="text-secondary md:text-lg xsm:hidden">{title}</h6>
         <p className="text-gray text-sm">{description}</p>
       </div>
     </div>
@@ -25,19 +25,19 @@ const Header = () => {
   return (
     <header className="relative">
       <div className="py-5 lg:py-3 bg-bg-secondary">
-        <div className="container flex items-center justify-between sm:text-sm">
-          <p>Opening Hours: 06:00 to 20:00</p>
+        <div className="container flex items-center justify-between sm:text-sm xsm:text-xs">
+          <p className="sm:text-sm">Opening Hours: 06:00 to 20:00</p>
           <ul className="flex">
-            <li className="mx-1.5">
+            <li className="mx-1.5 sm:text-sm">
               <FaInstagram />
             </li>
-            <li className="mx-1.5">
+            <li className="mx-1.5 sm:text-sm">
               <FaFacebook />
             </li>
-            <li className="mx-1.5">
+            <li className="mx-1.5 sm:text-sm">
               <FaTwitter />
             </li>
-            <li className="mx-1.5">
+            <li className="mx-1.5 sm:text-sm">
               <FaPinterest />
             </li>
           </ul>
@@ -46,8 +46,8 @@ const Header = () => {
 
       <section className="flex flex-col bg-white pt-7 lg:pt-4 pb-12 lg:pb-8">
         <div className="flex sm:flex-col items-center justify-between container">
-          <img src={Logo} alt="BlueCollar" className="w-60 lg:w-52 md:w-40 h-auto sm:w-3/4 sm:h-auto" />
-          <div className="flex sm:mt-5">
+          <img src={Logo} alt="BlueCollar" className="w-60 lg:w-52 md:w-40 h-auto sm:w-3/4 sm:h-auto xsm:w-1/2" />
+          <div className="flex sm:mt-5 xxsm:flex-col xxsm:gap-3">
             <HeaderInforCard logo={<FaEnvelope />} title="Mail Us" description="info@example.com" />
             <HeaderInforCard logo={<FaPhone />} title="Call Us" description="+01 569 896 654" />
           </div>
@@ -59,15 +59,15 @@ const Header = () => {
           <RxHamburgerMenu
             onClick={() => {
               navMenu.current.classList.toggle('opacity-100')
-              navMenu.current.classList.toggle('opacity-0')
+              navMenu.current.classList.toggle('md:opacity-0')
               navMenu.current.classList.toggle('visible')
-              navMenu.current.classList.toggle('invisible')
+              navMenu.current.classList.toggle('md:invisible')
             }}
           />
         </div>
         <ul
           ref={navMenu}
-          className="flex items-center md:items-start md:flex-col md:absolute bg-primary top-full left-0 opacity-0 invisible transition-all"
+          className="flex items-center md:items-start md:flex-col md:absolute bg-primary top-full left-0 opacity-100 visible md:opacity-0 md:invisible transition-all"
         >
           {navData?.map(({ id, name, link, hasChildren, children }) => (
             <li key={id} className="md:my-2.5">
@@ -80,7 +80,7 @@ const Header = () => {
                       <RxCaretRight className="hidden md:block" />
                     </span>
                   </div>
-                  <ul className="absolute bg-primary top-[calc(100%_+_20px)] md:top-0 left-1/2 -translate-x-1/2 md:left-[110%] md:translate-x-0 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all">
+                  <ul className="absolute bg-primary top-[calc(100%_+_20px)] md:top-0 left-1/2 -translate-x-1/2 md:left-[105%] md:translate-x-0 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all">
                     {children.map(({ id, name, link }) => (
                       <li key={id} className="py-2">
                         <NavLinkStyled to={link} className="mx-6 w-[max-content] inline-block">

@@ -3,15 +3,7 @@ module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     container: {
-      center: true,
-      margin: {
-        DEFAULT: '2rem',
-        sm: '1rem',
-        md: '1rem',
-        lg: '1rem',
-        xl: '1rem',
-        xxl: '1rem'
-      }
+      center: true
     },
     colors: {
       primary: '#FFB342',
@@ -19,7 +11,7 @@ module.exports = {
       'primary-dark': '#eba63e',
       secondary: '#1C2752',
       'secondary-dark': '#101731',
-      bg: '#ebe7e7',
+      bg: '#f1f1f1',
       'bg-secondary': '#F2F2F2',
       gray: '#7E7E7E',
       white: '#FFFFFF',
@@ -31,7 +23,9 @@ module.exports = {
       lg: { max: '992px' },
       md: { max: '768px' },
       sm: { max: '640px' },
-      xsm: { max: '480px' }
+      xsm: { max: '480px' },
+      xxsm: { max: '400px' },
+      xxxsm: { max: '300px' }
     },
     fontFamily: {
       'font-primary': ['Mulish', 'sans-serif']
