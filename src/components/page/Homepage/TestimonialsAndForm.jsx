@@ -65,7 +65,7 @@ const TestimonialsAndForm = () => {
         <div className="w-1/2 lg:w-full lg:pt-10">
           <Heading img={icon} title="Meet Us" />
           <h3 className="pt-1 pb-5">Appointment Form</h3>
-          <form className="p-10 bg-bg flex flex-col items-stretch h-[calc(100%_-_120px)]">
+          <form className="p-10 sm:p-5 bg-bg flex flex-col items-stretch h-[calc(100%_-_120px)]">
             <Input type="text" placeholder="Your Name" />
             <Input type="email" placeholder="Email Address" />
             <Input type="text" placeholder="Phone Number" />

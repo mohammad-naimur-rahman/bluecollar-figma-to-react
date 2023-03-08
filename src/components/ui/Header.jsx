@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <header className="relative">
       <div className="py-5 lg:py-3 bg-bg-secondary">
-        <div className="container flex items-center justify-between">
+        <div className="container flex items-center justify-between sm:text-sm">
           <p>Opening Hours: 06:00 to 20:00</p>
           <ul className="flex">
             <li className="mx-1.5">
@@ -45,9 +45,9 @@ const Header = () => {
       </div>
 
       <section className="flex flex-col bg-white pt-7 lg:pt-4 pb-12 lg:pb-8">
-        <div className="flex items-center justify-between container">
-          <img src={Logo} alt="BlueCollar" className="w-60 lg:w-52 md:w-40 h-auto" />
-          <div className="flex">
+        <div className="flex sm:flex-col items-center justify-between container">
+          <img src={Logo} alt="BlueCollar" className="w-60 lg:w-52 md:w-40 h-auto sm:w-3/4 sm:h-auto" />
+          <div className="flex sm:mt-5">
             <HeaderInforCard logo={<FaEnvelope />} title="Mail Us" description="info@example.com" />
             <HeaderInforCard logo={<FaPhone />} title="Call Us" description="+01 569 896 654" />
           </div>

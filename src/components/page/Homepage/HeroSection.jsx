@@ -14,9 +14,9 @@ const HeroSection = () => {
             className={classNames(styles['header-transparent'], 'px-2 inline-flex items-center justify-center py-1')}
           >
             <img src={gearIcon} alt="gear" />
-            <p className="text-lg">We Provide Electric Services For Industrial Project</p>
+            <p className="text-lg sm:text-base">We Provide Electric Services For Industrial Project</p>
           </div>
-          <h1 className="font-bold pb-3">We Are Professional Quality Services</h1>
+          <h1 className="font-bold pb-3 sm:text-2xl sm:pt-3">We Are Professional Quality Services</h1>
           <Link to="/services">
             <Button>Our Services</Button>
           </Link>

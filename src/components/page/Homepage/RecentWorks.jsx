@@ -8,7 +8,7 @@ import gallery4 from '@assets/images/homepage/gallery-4.png'
 
 const GalleryCard = ({ img, title, description }) => {
   return (
-    <div className="p-4 xl:p-2 w-1/4 lg:w-1/2 text-center cursor-pointer">
+    <div className="p-4 xl:p-2 w-1/4 lg:w-1/2 sm:w-full text-center cursor-pointer">
       <div className="p-5 xl:p-2 lg:p-4 bg-white h-full">
         <img src={img} alt={title} className="w-full h-auto object-cover" />
         <h6 className="text-secondary pt-4 pb-1">{title}</h6>

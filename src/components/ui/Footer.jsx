@@ -44,13 +44,13 @@ const socialIcons = [
 
 const InforCard = ({ logo, title, description }) => {
   return (
-    <div className="flex items-center ml-6 lg:ml-0">
-      <div className="bg-primary w-14 h-14 lg:w-12 lg:h-12 rounded-full flex items-center justify-center">
+    <div className="flex items-center ml-6 lg:ml-0 sm:mb-5">
+      <div className="bg-primary w-14 h-14 lg:w-12 lg:h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center">
         <div className="text-lg">{logo}</div>
       </div>
-      <div className="ml-1.5">
-        <h6 className="text-white md:text-base">{title}</h6>
-        <p className="text-white text-sm md:text-xs">{description}</p>
+      <div className="ml-1.5 sm:ml-3">
+        <h6 className="text-white md:text-base sm:text-xl">{title}</h6>
+        <p className="text-white text-sm md:text-xs sm:text-sm">{description}</p>
       </div>
     </div>
   )
@@ -84,7 +84,7 @@ const Footer = () => {
         <div className="container py-12 lg:py-6">
           <div className="flex items-center justify-between lg:flex-col">
             <img src={logo} alt="Blue Collar" />
-            <div className="flex lg:pt-8 lg:justify-between lg:w-full">
+            <div className="flex sm:flex-col lg:pt-8 lg:justify-between lg:w-full">
               {footerInfos.map(({ id, logo, title, description }) => (
                 <InforCard key={id} logo={logo} title={title} description={description} />
               ))}

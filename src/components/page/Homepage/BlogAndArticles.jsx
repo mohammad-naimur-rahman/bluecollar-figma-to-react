@@ -37,17 +37,17 @@ const BlogAndArticles = () => {
 
         <div className="flex flex-wrap items-stretch justify-center py-10">
           {blogs.map(({ id, img, title, description, writer, date }) => (
-            <div key={id} className="w-1/2">
-              <div className="p-10 lg:p-5 md:p-2 flex flex-col justify-between items-start h-full">
+            <div key={id} className="w-1/2 sm:w-full">
+              <div className="p-10 lg:p-5 md:p-2 sm:p-2 flex flex-col justify-between items-start h-full">
                 <div>
                   <div className="relative">
                     <img src={img} alt={title} />
                     <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-secondary flex">
-                      <div className="bg-primary-light flex items-center justify-center py-3 px-4 md:py-1 md:px-2">
+                      <div className="bg-primary-light flex items-center justify-center py-3 px-4 md:py-1 md:px-2 sm:py-3 sm:px-4">
                         <BsPersonFill />
                         <p className="w-[max-content]">{writer}</p>
                       </div>
-                      <div className="bg-primary flex items-center justify-center py-3 px-4 md:py-1 md:px-2">
+                      <div className="bg-primary flex items-center justify-center py-3 px-4 md:py-1 md:px-2 sm:py-3 sm:px-4">
                         <BsClockFill />
                         <p className="w-[max-content]">{date}</p>
                       </div>

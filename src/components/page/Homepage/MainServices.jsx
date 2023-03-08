@@ -13,14 +13,14 @@ const NavButton = ({ img, title, className }) => {
   return (
     <div
       className={classNames(
-        'flex items-center justify-center px-6 py-2 md:px-4 md:py-1 cursor-pointer border-2 hover:bg-white hover:border-white transition-all',
+        'flex items-center justify-center px-6 py-2 md:px-4 md:py-1 sm:px-2 cursor-pointer border-2 hover:bg-white hover:border-white transition-all',
         className,
         {
           'border-secondary': !className
         }
       )}
     >
-      <img src={img} alt={title} className="w-9" />
+      <img src={img} alt={title} className="w-9 sm:w-6" />
       <p className="pl-2">{title}</p>
     </div>
   )
