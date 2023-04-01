@@ -74,9 +74,9 @@ const FirstSection = () => {
 
         <div className="flex gap-10 pt-xxl">
           <Card img={vector1} title="1920" desc="Project Completed" />
-          <Card img={vector1} title="1920" desc="Project Completed" />
-          <Card img={vector1} title="1920" desc="Project Completed" />
-          <Card img={vector1} title="1920" desc="Project Completed" />
+          <Card img={vector2} title="2500+" desc="Industry Solutions" />
+          <Card img={vector3} title="500+" desc="Expert Contractors" />
+          <Card img={vector4} title="1k+" desc="Happy Customers" />
         </div>
       </div>
     </section>
