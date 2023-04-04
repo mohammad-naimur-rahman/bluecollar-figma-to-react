@@ -21,7 +21,7 @@ const TickSection = ({ children }) => {
 
 const Card = ({ img, title, desc }) => {
   return (
-    <div className="flex flex-col items-center justify-center basis-[calc(25%_-_32px)] xl:basis-[calc(25%_-_20px)] md:basis-[calc(50%_-_20px)] sm:basis-full text-secondary text-center bg-bg p-8 xl:p-5">
+    <div className="flex flex-col items-center justify-center basis-[calc(25%_-_32px)] xl:basis-[calc(25%_-_20px)] md:basis-[calc(50%_-_20px)] sm:basis-full text-secondary text-center bg-bg p-8 xl:p-5 shadow-md">
       <img src={img} alt={title} className="w-16 h-auto" />
       <h3 className="py-1">{title}</h3>
       <p>{desc}</p>

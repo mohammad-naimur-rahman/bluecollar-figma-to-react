@@ -20,7 +20,7 @@ const TestimonialsAndForm = () => {
           <Heading img={icon} title="Testimonials" />
           <h3 className="pt-1 pb-5">Customers Say</h3>
 
-          <div className="border-[1px] border-gray border-opacity-30 p-8 sm:p-4 xxsm:p-2">
+          <div className="border-[1px] border-gray border-opacity-30 p-8 sm:p-4 xxsm:p-2 shadow-md">
             <div className="flex justify-between items-center">
               <div className="flex justify-center items-center">
                 <img src={testimonial1} alt="Nancy Luther" className="w-[70px] sm:w-[50px] h-auto" />
@@ -49,7 +49,7 @@ const TestimonialsAndForm = () => {
             </div>
           </div>
 
-          <div className="bg-primary p-8 sm:p-4 xxsm:p-2 text-secondary mt-5">
+          <div className="bg-primary p-8 sm:p-4 xxsm:p-2 text-secondary mt-5 shadow-lg">
             <Heading img={icon} title="Any Question" />
             <h5 className="pt-4 pb-4">99.9% Customer Satisfation Based</h5>
             <p>If you have any questions or need help contact with our team, or call</p>
@@ -65,7 +65,7 @@ const TestimonialsAndForm = () => {
         <div className="w-1/2 lg:w-full lg:pt-10">
           <Heading img={icon} title="Meet Us" />
           <h3 className="pt-1 pb-5">Appointment Form</h3>
-          <form className="p-10 sm:p-5 bg-bg flex flex-col items-stretch h-[calc(100%_-_120px)]">
+          <form className="p-10 sm:p-5 bg-bg flex flex-col items-stretch h-[calc(100%_-_120px)] shadow-md">
             <Input type="text" placeholder="Your Name" />
             <Input type="email" placeholder="Email Address" />
             <Input type="text" placeholder="Phone Number" />

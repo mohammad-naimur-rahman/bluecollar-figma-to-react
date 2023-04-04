@@ -7,7 +7,7 @@ import expert3 from '@assets/images/about-us/expert3.png'
 
 const Card = ({ img, title, desc }) => {
   return (
-    <div className="w-1/3 sm:w-full border-gray border-[1px] border-opacity-30 p-7 lg:p-3 cursor-pointer">
+    <div className="w-1/3 sm:w-full border-gray border-[1px] border-opacity-30 p-7 lg:p-3 cursor-pointer shadow-md">
       <img src={img} alt={title} />
       <h5 className="text-secondary pt-7 sm:pt-3">{title}</h5>
       <p className="text-gray">{desc}</p>

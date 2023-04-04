@@ -23,7 +23,7 @@ const SecondSection = () => {
           </p>
 
           <div className="flex items-center xsm:flex-col">
-            <div className="flex flex-col xsm:flex-row bg-bg w-36 xsm:w-full items-center justify-center">
+            <div className="flex flex-col xsm:flex-row bg-bg w-36 xsm:w-full items-center justify-center shadow-md">
               <h1 className="text-primary xsm:mr-3">35</h1>
               <h6 className="text-center">Years Of Experience</h6>
             </div>

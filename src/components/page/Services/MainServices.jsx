@@ -44,7 +44,7 @@ const MainServices = () => {
           </div>
         </div>
 
-        <div className="container bg-white p-10 xl:p-8 md:p-5 xsm:p-3 flex lg:flex-col justify-between">
+        <div className="container bg-white p-10 xl:p-8 md:p-5 xsm:p-3 flex lg:flex-col justify-between shadow-lg">
           <div className="w-[60%] lg:w-full lg:order-2 lg:mt-5">
             <Heading img={fourth} title="Based on Commercial" className="mb-2" />
             <h3>Commercial</h3>

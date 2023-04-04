@@ -54,7 +54,7 @@ const Header = () => {
         </div>
       </section>
 
-      <nav className="flex items-center justify-between bg-primary container py-3 absolute -translate-x-1/2 left-1/2 -bottom-14">
+      <nav className="flex items-center justify-between bg-primary container py-3 absolute -translate-x-1/2 left-1/2 -bottom-14 shadow-lg">
         <div className="hidden md:block text-3xl cursor-pointer">
           <RxHamburgerMenu
             onClick={() => {
