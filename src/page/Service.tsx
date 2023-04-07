@@ -48,7 +48,7 @@ const Tick = ({ title, bottomMargin = true }: { title: string; bottomMargin: boo
 
 const Tiles = ({ img, title, desc }: { img: string; title: string; desc: string }) => {
   return (
-    <div className="flex items-start w-[calc(50%_-_40px)]">
+    <div className="flex items-start w-[calc(50%_-_40px)] xl:w-[calc(50%_-_20px)] lg:w-full">
       <img src={img} alt={title} className="w-8 h-8 aspect-square object-cover" />
       <div className="pl-5">
         <h6 className="text-secondary pb-1">{title}</h6>
@@ -60,7 +60,7 @@ const Tiles = ({ img, title, desc }: { img: string; title: string; desc: string 
 
 const TeamMember = ({ img, name, title }: { img: string; name: string; title: string }) => {
   return (
-    <div className="w-1/3 border-[1px] border-gray border-opacity-30 p-3 text-center">
+    <div className="w-1/3 lg:w-full border-[1px] border-gray border-opacity-30 p-3 text-center">
       <img src={img} alt={name} className="w-full h-auto" />
       <h6 className="text-secondary pt-4">{name}</h6>
       <p className="text-gray pb-1 pt-1">{title}</p>
@@ -73,9 +73,9 @@ const Service = () => {
     <Layout title="Services">
       <BreadCrumb title="Service Single" img={bg} />
       <div className="bg-white">
-        <div className="container flex gap-10 p-xxl">
+        <div className="container flex md:flex-col gap-10 p-xxl">
           {/**Left side */}
-          <div className="w-1/3">
+          <div className="w-1/3 md:w-full">
             <div className="px-5 py-8 text-center flex flex-col w-full items-center justify-center text-white font-bold relative overflow-hidden z-10">
               <div className="absolute inset-0 w-full h-full -z-10 blur-[3px]">
                 <img src={firstBg} alt="how we work" className="absolute inset-0 w-full h-full object-cover" />
@@ -97,7 +97,7 @@ const Service = () => {
           </div>
 
           {/**Right side */}
-          <div className="w-2/3">
+          <div className="w-2/3 md:w-full">
             <img src={first} alt="Description for Commercial Services" className="w-full h-auto" />
             <h3 className="pt-5 pb-1">Description for Commercial Services</h3>
             <p className="text-gray">
@@ -108,10 +108,10 @@ const Service = () => {
               strategies.
             </p>
 
-            <div className="flex py-10">
-              <div className="min-w-[60px] bg-secondary"></div>
+            <div className="flex sm:flex-col py-10">
+              <div className="min-w-[60px] sm:w-auto sm:h-11 bg-secondary"></div>
               <div className="bg-primary">
-                <p className="text-xl text-secondary px-14 py-12 font-bold italic">
+                <p className="text-xl text-secondary px-14 lg:px-10 md:px-8 sm:px-6 py-12 lg:py-8 md:py-6 sm:py-5 font-bold italic">
                   The job market of the future will consist of those jobs that robots cannot perform. Our blue-collar
                   work is pattern recognition, making sense of what you see.
                 </p>
@@ -124,7 +124,7 @@ const Service = () => {
               virtual e tailers objectively seize scalable.
             </p>
 
-            <div className="bg-bg px-12 py-12 flex flex-wrap gap-x-20 gap-y-12 my-12">
+            <div className="bg-bg p-12 xl:p-8 lg:p-5 md:p-3 flex lg:flex-col flex-wrap gap-x-20 xl:gap-x-10 gap-y-12 lg:gap-y-8 my-12 lg:my-8">
               <Tiles
                 img={vector1}
                 title="24/7 Availability"
@@ -154,19 +154,19 @@ const Service = () => {
               fully researched growth strategies.
             </p>
 
-            <div className="flex items-center py-8 gap-6">
-              <div className="w-1/2">
+            <div className="flex lg:flex-col items-center py-8 gap-6">
+              <div className="w-1/2 lg:w-full lg:order-2">
                 {secondTicks.map(tick => (
                   <Tick key={tick} title={tick} bottomMargin={false} />
                 ))}
               </div>
-              <div className="w-1/2">
+              <div className="w-1/2 lg:w-full lg:order-1">
                 <img src={next} alt="Key benefits With Our Service" className="w-full h-auto" />
               </div>
             </div>
 
-            <h3 className="text-secondary pt-5">Our Expert Team</h3>
-            <div className="flex gap-3">
+            <h3 className="text-secondary pt-5 pb-8">Our Expert Team</h3>
+            <div className="flex lg:flex-col gap-3">
               <TeamMember img={expert1} name="Gavin Avery" title="Engineer" />
               <TeamMember img={expert2} name="Nathan Tucker" title="Engineer" />
               <TeamMember img={expert3} name="Sarrah Albert" title="Engineer" />
