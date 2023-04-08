@@ -9,7 +9,7 @@ import Button from '../../ui/Button'
 import styles from '@styles/page/homepage.module.scss'
 import Heading from '../../ui/Heading'
 
-const NavButton = ({ img, title, className }) => {
+const NavButton = ({ img, title, className }: { img: string; title: string; className: string }) => {
   return (
     <div
       className={classNames(

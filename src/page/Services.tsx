@@ -1,8 +1,8 @@
 import Layout from '@components/ui/Layout'
 import BreadCrumb from '@components/ui/BreadCrumb'
 import breadcrumbImg from '@assets/images/services/breadcrumb.png'
-import MainServices from '@components/page/Services/MainServices.jsx'
-import LastSection from '@components/page/Services/LastSection.jsx'
+import MainServices from '@components/page/Services/MainServices'
+import LastSection from '@components/page/Services/LastSection'
 import OurServices from '@components/page/Homepage/OurServices'
 
 const Services = () => {

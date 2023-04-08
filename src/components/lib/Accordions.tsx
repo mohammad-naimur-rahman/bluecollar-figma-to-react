@@ -53,13 +53,13 @@ export const AccordionItem = ({
   className
 }: {
   children: ReactNode
-  states: arrOfObjType
-  setstates: React.Dispatch<React.SetStateAction<arrOfObjType>>
-  index: number
-  className: string
+  states?: arrOfObjType
+  setstates?: React.Dispatch<React.SetStateAction<arrOfObjType>>
+  index?: number
+  className?: string
 }) => {
   const arr = Children.toArray(children)
-  const openedIndex = states.findIndex(({ status }) => status === 'opened')
+  const openedIndex = states?.findIndex(({ status }) => status === 'opened')
   const modifiedChild = Children.map(arr, (child, i) => {
     if (
       isValidElement(child) &&
@@ -89,30 +89,32 @@ export const AccordionTitle = ({
   arrowKeyClassName
 }: {
   children: ReactNode
-  states: arrOfObjType
-  setstates: React.Dispatch<React.SetStateAction<arrOfObjType>>
-  index: number
-  openedIndex: number
-  className: string
-  arrowKey: ReactNode
-  arrowKeyClassName: string
+  states?: arrOfObjType
+  setstates?: React.Dispatch<React.SetStateAction<arrOfObjType>>
+  index?: number
+  openedIndex?: number
+  className?: string
+  arrowKey?: ReactNode
+  arrowKeyClassName?: string
 }) => {
   const handleClick = () => {
-    const newState = states.map(({ index: i }) => {
-      if (i === index) {
-        return {
-          index: i,
-          status: 'opened'
+    if (setstates) {
+      const newState = states?.map(({ index: i }) => {
+        if (i === index) {
+          return {
+            index: i,
+            status: 'opened'
+          }
+        } else {
+          return {
+            index: i,
+            status: 'closed'
+          }
         }
-      } else {
-        return {
-          index: i,
-          status: 'closed'
-        }
-      }
-    })
+      })
 
-    setstates(newState as arrOfObjType)
+      setstates(newState as arrOfObjType)
+    }
   }
   return (
     <div
@@ -133,6 +135,7 @@ export const AccordionTitle = ({
     </div>
   )
 }
+
 export const AccordionContent = ({
   children,
   index,
@@ -140,9 +143,9 @@ export const AccordionContent = ({
   className
 }: {
   children: ReactNode
-  index: number
-  openedIndex: number
-  className: string
+  index?: number
+  openedIndex?: number
+  className?: string
 }) => {
   return (
     <div

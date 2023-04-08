@@ -19,7 +19,7 @@ const tickItems = [
   'Ballast/Lamp Replacing'
 ]
 
-const Tick = ({ title }) => {
+const Tick = ({ title }: { title: string }) => {
   return (
     <div className="flex items-center pb-5 w-1/2 pr-[10%] sm:w-full sm:pr-0">
       <img src={tick} alt="tick" className="w-6 h-6 aspect-square object-cover" />
