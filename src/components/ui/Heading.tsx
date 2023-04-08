@@ -1,5 +1,4 @@
 import classNames from 'classnames'
-import React from 'react'
 
 const Heading = ({
   img,
@@ -11,10 +10,10 @@ const Heading = ({
 }: {
   img: string
   title: string
-  className: string
-  textClassName: string
-  imageSize: 'w-5' | string
-  bg: string
+  className?: string
+  textClassName?: string
+  imageSize?: 'w-5' | string
+  bg?: string
 }) => {
   return (
     <div

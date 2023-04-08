@@ -7,9 +7,9 @@ const Button = ({
   variant = 'primary',
   ...rest
 }: {
-  children: ReactNode
-  className: string
-  variant: 'primary' | 'secondary' | 'white'
+  children: string | ReactNode
+  className?: string
+  variant?: 'primary' | 'secondary' | 'white'
 }) => {
   return (
     <button

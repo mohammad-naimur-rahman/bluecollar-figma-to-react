@@ -1,13 +1,13 @@
-import Layout from '@components/ui/Layout.jsx'
-import HeroSection from '@components/page/Homepage/HeroSection.jsx'
-import SecondSection from '@components/page/Homepage/SecondSection.jsx'
-import MainServices from '@components/page/Homepage/MainServices.jsx'
-import OurServices from '@components/page/Homepage/OurServices.jsx'
-import WhyChooseUs from '@components/page/Homepage/WhyChooseUs.jsx'
-import RecentWorks from '@components/page/Homepage/RecentWorks.jsx'
-import TestimonialsAndForm from '@components/page/Homepage/TestimonialsAndForm.jsx'
-import PriceAndPlan from '@components/page/Homepage/PriceAndPlan.jsx'
-import BlogAndArticles from '@components/page/Homepage/BlogAndArticles.jsx'
+import Layout from '@components/ui/Layout'
+import HeroSection from '@components/page/Homepage/HeroSection'
+import SecondSection from '@components/page/Homepage/SecondSection'
+import MainServices from '@components/page/Homepage/MainServices'
+import OurServices from '@components/page/Homepage/OurServices'
+import WhyChooseUs from '@components/page/Homepage/WhyChooseUs'
+import RecentWorks from '@components/page/Homepage/RecentWorks'
+import TestimonialsAndForm from '@components/page/Homepage/TestimonialsAndForm'
+import PriceAndPlan from '@components/page/Homepage/PriceAndPlan'
+import BlogAndArticles from '@components/page/Homepage/BlogAndArticles'
 
 const Homepage = () => {
   return (

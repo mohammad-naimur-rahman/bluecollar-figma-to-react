@@ -1,4 +1,4 @@
-import Layout from '@components/ui/Layout.jsx'
+import Layout from '@components/ui/Layout'
 import BreadCrumb from '@components/ui/BreadCrumb'
 import bg from '@assets/images/service/bg.png'
 import firstBg from '@assets/images/service/first-bg.png'

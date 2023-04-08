@@ -1,4 +1,4 @@
-import React, { ReactNode, useRef } from 'react'
+import { ReactNode, useRef } from 'react'
 import { FaEnvelope, FaFacebook, FaInstagram, FaPhone, FaPinterest, FaTwitter } from 'react-icons/fa'
 import Logo from '@assets/Logo.png'
 import navData from '@data/ui/nav.json'
