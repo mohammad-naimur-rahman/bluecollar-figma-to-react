@@ -1,7 +1,7 @@
-import React from 'react'
+import { ReactNode } from 'react'
 import { Helmet } from 'react-helmet'
 
-const Layout = ({ title, meta, children }) => {
+const Layout = ({ title, meta, children }: { title: string; meta: ReactNode; children: ReactNode }) => {
   return (
     <div>
       <Helmet>

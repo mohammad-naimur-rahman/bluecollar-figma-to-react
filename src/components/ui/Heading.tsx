@@ -1,7 +1,21 @@
 import classNames from 'classnames'
 import React from 'react'
 
-const Heading = ({ img, title, className, textClassName, imageSize = 'w-5', bg }) => {
+const Heading = ({
+  img,
+  title,
+  className,
+  textClassName,
+  imageSize = 'w-5',
+  bg
+}: {
+  img: string
+  title: string
+  className: string
+  textClassName: string
+  imageSize: 'w-5' | string
+  bg: string
+}) => {
   return (
     <div
       className={classNames(

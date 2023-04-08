@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
 
-const Input = ({ className, as, ...rest }) => {
+const Input = ({ className, as, ...rest }: { className: string; as: 'textarea' | null }) => {
   if (as === 'textarea') {
     return (
       <textarea

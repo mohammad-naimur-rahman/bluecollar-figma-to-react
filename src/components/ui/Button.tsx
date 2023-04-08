@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import classNames from 'classnames'
 
-const Button = ({ children, className, variant = 'primary', ...rest }) => {
+const Button = ({
+  children,
+  className,
+  variant = 'primary',
+  ...rest
+}: {
+  children: ReactNode
+  className: string
+  variant: 'primary' | 'secondary' | 'white'
+}) => {
   return (
     <button
       {...rest}

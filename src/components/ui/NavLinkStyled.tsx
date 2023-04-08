@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { NavLink } from 'react-router-dom'
 
-const NavLinkStyled = ({ to, children, ...rest }) => {
+const NavLinkStyled = ({
+  to,
+  children,
+  className,
+  ...rest
+}: {
+  to: string
+  children: ReactNode
+  className: string
+}) => {
   return (
     <NavLink
       to={to}
@@ -12,6 +21,7 @@ const NavLinkStyled = ({ to, children, ...rest }) => {
           textUnderlinePosition: 'under'
         }
       }}
+      className={className}
       {...rest}
     >
       {children}

@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '@styles/page/homepage.module.scss'
 import classNames from 'classnames'
 import { Link } from 'react-router-dom'
-import Button from '@components/ui/Button.jsx'
+import Button from '@components/ui/Button'
 import gearIcon from '@assets/images/homepage/gear.png'
 
 const HeroSection = () => {

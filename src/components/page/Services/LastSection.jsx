@@ -1,4 +1,4 @@
-import Heading from '@components/ui/Heading.jsx'
+import Heading from '@components/ui/Heading'
 import logo from '@assets/images/homepage/why-choose-us-icon.png'
 import { AccordionContent, AccordionItem, AccordionTitle, Accordions } from '../../lib/Accordions'
 import { RxCaretRight } from 'react-icons/rx'
