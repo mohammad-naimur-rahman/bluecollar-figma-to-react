@@ -1,13 +1,18 @@
 import classNames from 'classnames'
-import { useState, Children, isValidElement, cloneElement, useEffect } from 'react'
+import { useState, Children, isValidElement, cloneElement, useEffect, ReactNode } from 'react'
 
-export const Accordions = ({ children, className }) => {
-  const [states, setstates] = useState([])
+type arrOfObj = {
+  index: number
+  status: 'opened' | 'closed'
+}
+type arrOfObjType = arrOfObj[]
+
+export const Accordions = ({ children, className }: { children: ReactNode; className: string }) => {
+  const [states, setstates] = useState<arrOfObjType>([])
 
   const arr = Children.toArray(children)
-
   useEffect(() => {
-    let temp = []
+    let temp: arrOfObjType = []
 
     Children.map(arr, (child, i) => {
       if (i === 0) {
@@ -27,12 +32,12 @@ export const Accordions = ({ children, className }) => {
   }, [])
 
   const modifiedChild = Children.map(arr, (child, i) => {
-    if (isValidElement(child) && child.type.name === 'AccordionItem') {
+    if (isValidElement(child) && child.type && (child.type as any).name === 'AccordionItem') {
       return cloneElement(child, {
         states,
         setstates,
         index: i
-      })
+      } as { states: arrOfObjType; setstates: React.Dispatch<React.SetStateAction<arrOfObjType>>; index: number })
     } else {
       return null
     }
@@ -40,17 +45,32 @@ export const Accordions = ({ children, className }) => {
   return <div className={className}>{modifiedChild}</div>
 }
 
-export const AccordionItem = ({ children, states, setstates, index, className }) => {
+export const AccordionItem = ({
+  children,
+  states,
+  setstates,
+  index,
+  className
+}: {
+  children: ReactNode
+  states: arrOfObjType
+  setstates: React.Dispatch<React.SetStateAction<arrOfObjType>>
+  index: number
+  className: string
+}) => {
   const arr = Children.toArray(children)
   const openedIndex = states.findIndex(({ status }) => status === 'opened')
   const modifiedChild = Children.map(arr, (child, i) => {
-    if (isValidElement(child) && ['AccordionTitle', 'AccordionContent'].includes(child.type.name)) {
+    if (
+      isValidElement(child) &&
+      ['AccordionTitle', 'AccordionContent'].includes(child.type && (child.type as any).name)
+    ) {
       return cloneElement(child, {
         states,
         setstates,
         index,
         openedIndex
-      })
+      } as { states: arrOfObjType; setstates: React.Dispatch<React.SetStateAction<arrOfObjType>>; index: number; openedIndex: number })
     } else {
       return null
     }
@@ -67,6 +87,15 @@ export const AccordionTitle = ({
   className,
   arrowKey,
   arrowKeyClassName
+}: {
+  children: ReactNode
+  states: arrOfObjType
+  setstates: React.Dispatch<React.SetStateAction<arrOfObjType>>
+  index: number
+  openedIndex: number
+  className: string
+  arrowKey: ReactNode
+  arrowKeyClassName: string
 }) => {
   const handleClick = () => {
     const newState = states.map(({ index: i }) => {
@@ -83,7 +112,7 @@ export const AccordionTitle = ({
       }
     })
 
-    setstates(newState)
+    setstates(newState as arrOfObjType)
   }
   return (
     <div
@@ -104,7 +133,17 @@ export const AccordionTitle = ({
     </div>
   )
 }
-export const AccordionContent = ({ children, index, openedIndex, className }) => {
+export const AccordionContent = ({
+  children,
+  index,
+  openedIndex,
+  className
+}: {
+  children: ReactNode
+  index: number
+  openedIndex: number
+  className: string
+}) => {
   return (
     <div
       className={classNames(
