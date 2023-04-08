@@ -3,7 +3,7 @@ import icon from '@assets/images/homepage/icon.png'
 import tick from '@assets/images/homepage/tick.png'
 import Heading from '../../ui/Heading'
 
-const Timeline = ({ year, desc }) => {
+const Timeline = ({ year, desc }: { year: string; desc: string }) => {
   return (
     <div className="flex gap-12 items-center">
       <div className="w-[10px] h-[10px] min-w-[10px] rounded-full bg-secondary outline-2 outline-secondary outline outline-offset-2 shadow-lg" />

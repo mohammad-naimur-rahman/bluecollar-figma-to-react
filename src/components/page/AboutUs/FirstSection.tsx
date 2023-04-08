@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import Heading from '../../ui/Heading'
 import Button from '../../ui/Button'
 import icon from '@assets/images/homepage/icon.png'
@@ -10,16 +10,16 @@ import vector2 from '@assets/images/about-us/vector2.png'
 import vector3 from '@assets/images/about-us/vector3.png'
 import vector4 from '@assets/images/about-us/vector4.png'
 
-const TickSection = ({ children }) => {
+const TickSection = ({ children }: { children: string | ReactNode }) => {
   return (
     <div className="flex items-center w-1/2 xxsm:w-full py-2">
-      <img src={tick} alt={children} />
+      <img src={tick} alt={typeof children === 'string' ? children : ''} />
       <p className="pl-2">{children}</p>
     </div>
   )
 }
 
-const Card = ({ img, title, desc }) => {
+const Card = ({ img, title, desc }: { img: string; title: string; desc: string }) => {
   return (
     <div className="flex flex-col items-center justify-center basis-[calc(25%_-_32px)] xl:basis-[calc(25%_-_20px)] md:basis-[calc(50%_-_20px)] sm:basis-full text-secondary text-center bg-bg p-8 xl:p-5 shadow-md">
       <img src={img} alt={title} className="w-16 h-auto" />

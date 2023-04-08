@@ -1,9 +1,9 @@
 import Layout from '@components/ui/Layout'
-import BreadCrumb from '@components/ui/BreadCrumb.tsx'
+import BreadCrumb from '@components/ui/BreadCrumb'
 import bg from '@assets/images/about-us/bg.png'
-import FirstSection from '@components/page/AboutUs/FirstSection.jsx'
-import SecondSection from '@components/page/AboutUs/SecondSection.jsx'
-import ThirdSection from '@components/page/AboutUs/ThirdSection.jsx'
+import FirstSection from '@components/page/AboutUs/FirstSection'
+import SecondSection from '@components/page/AboutUs/SecondSection'
+import ThirdSection from '@components/page/AboutUs/ThirdSection'
 
 const AboutUs = () => {
   return (
