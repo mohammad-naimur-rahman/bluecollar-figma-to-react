@@ -22,7 +22,7 @@ const BlogPost = () => {
             </div>
           </div>
         </div>
-        <div className="container max-w-[765px] [&>p]:text-gray mx-auto mt-12 sm:mt-28">
+        <div className="max-w-[800px] px-5 md:px-2 [&>p]:text-gray mx-auto mt-12 sm:mt-28">
           <p>
             Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium dynamically
             target high-payoff intellectual capital for customized technologies objectively integrate emerging core

@@ -4,7 +4,7 @@ import comment from '@assets/images/blog/comment.png'
 const BlogComment = () => {
   return (
     <section className="p-xl bg-bg">
-      <div className="container max-w-[765px] mx-auto text-center">
+      <div className="max-w-[800px] px-5 md:px-2 mx-auto text-center">
         <div className="p-5 rounded-full bg-primary aspect-square inline-flex justify-center items-center">
           <img src={quote} alt="quote" />
         </div>
