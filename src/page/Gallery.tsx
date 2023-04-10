@@ -5,6 +5,8 @@ import image3 from '@assets/images/gallery/3.png'
 import image4 from '@assets/images/gallery/4.png'
 import image5 from '@assets/images/gallery/5.png'
 import image6 from '@assets/images/gallery/6.png'
+import bg from '@assets/images/gallery/bg.png'
+import BreadCrumb from '@components/ui/BreadCrumb'
 
 const GalleryCard = ({ img, title, description }: { img: string; title: string; description: string }) => {
   return (
@@ -21,7 +23,8 @@ const GalleryCard = ({ img, title, description }: { img: string; title: string; 
 const Gallery = () => {
   return (
     <Layout title="Gallary">
-      <div className="container flex flex-wrap justify-around p-xxl">
+      <BreadCrumb img={bg} title="Our Projects" />
+      <div className="container flex flex-wrap justify-around p-xl">
         <GalleryCard title="Electrical & Maintenance" description="House, office" img={image1} />
         <GalleryCard title="Industry Machine Issue" description="House, Office" img={image2} />
         <GalleryCard title="Car Repai & Maintenance" description="Car, Bike, Load vehicle" img={image3} />
