@@ -7,7 +7,7 @@ import WhyChooseUs from '@components/page/Homepage/WhyChooseUs'
 import RecentWorks from '@components/page/Homepage/RecentWorks'
 import TestimonialsAndForm from '@components/page/Homepage/TestimonialsAndForm'
 import PriceAndPlan from '@components/page/Homepage/PriceAndPlan'
-import BlogAndArticles from '@components/page/Homepage/BlogAndArticles'
+import MoreBlogs from '@components/page/BlogSingle/MoreBlogs'
 
 const Homepage = () => {
   return (
@@ -20,7 +20,7 @@ const Homepage = () => {
       <RecentWorks />
       <TestimonialsAndForm />
       <PriceAndPlan />
-      <BlogAndArticles />
+      <MoreBlogs />
     </Layout>
   )
 }
