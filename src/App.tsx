@@ -28,8 +28,10 @@ export default function App() {
           <Route path=":service" element={<Service />} />
         </Route>
         <Route path="blogs/:id" element={<Blog />} />
-        <Route path="gallery" element={<Gallery />} />
-        <Route path="gallery/:id" element={<GallerySingle />} />
+        <Route path="gallery">
+          <Route path="" element={<Gallery />} />
+          <Route path=":id" element={<GallerySingle />} />
+        </Route>
         <Route path="pricing" element={<Pricing />} />
         <Route path="team" element={<Team />} />
         <Route path="team/:id" element={<TeamSingle />} />
