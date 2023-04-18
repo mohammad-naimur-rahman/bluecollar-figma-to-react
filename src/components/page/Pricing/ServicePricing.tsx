@@ -16,7 +16,7 @@ const PriceCard = ({
   bg?: string
 }) => {
   return (
-    <div className={classNames(bg, 'w-56 text-center pb-3')}>
+    <div className={classNames(bg, 'w-56 xl:w-48 lg:w-32 md:w-1/3 text-center pb-3')}>
       {popular ? (
         <div className="bg-primary text-sm text-center py-2">POPULAR</div>
       ) : (
@@ -42,22 +42,24 @@ const Price = ({
 }) => {
   return (
     <>
-      <div className="flex">
+      <div className="flex md:flex-col">
         <div className="bg-bg flex-grow pl-10 pt-1 pb-4">
-          <p className="text-gray text-base">{title}</p>
+          <p className="text-gray text-base pt-3">{title}</p>
         </div>
-        <div className="w-56 bg-bg flex items-center justify-center">
-          <img className="mx-auto" src={basic ? blueTick : crossTick} alt="tick" />
-        </div>
-        <div className="w-56 bg-white flex items-center justify-center">
-          <img className="mx-auto" src={standard ? blueTick : crossTick} alt="tick" />
-        </div>
-        <div className="w-56 bg-bg flex items-center justify-center">
-          <img className="mx-auto" src={professional ? blueTick : crossTick} alt="tick" />
+        <div className="flex">
+          <div className="w-56 xl:w-48 lg:w-32 md:w-1/3 py-5 bg-bg flex items-center justify-center">
+            <img className="mx-auto" src={basic ? blueTick : crossTick} alt="tick" />
+          </div>
+          <div className="w-56 xl:w-48 lg:w-32 md:w-1/3 py-5 bg-white flex items-center justify-center">
+            <img className="mx-auto" src={standard ? blueTick : crossTick} alt="tick" />
+          </div>
+          <div className="w-56 xl:w-48 lg:w-32 md:w-1/3 py-5 bg-bg flex items-center justify-center">
+            <img className="mx-auto" src={professional ? blueTick : crossTick} alt="tick" />
+          </div>
         </div>
       </div>
       <div className="flex h-[1px]">
-        <div className="w-10 bg-bg" />
+        <div className="w-10 bg-bg md:bg-gray md:bg-opacity-30" />
         <div className="flex-grow bg-gray bg-opacity-30"></div>
       </div>
     </>
@@ -67,31 +69,33 @@ const Price = ({
 const ServicePricing = () => {
   return (
     <section className="w-full pt-sm">
-      <div className="flex">
-        <div className="bg-bg flex-grow flex items-center pl-10">
-          <h4 className="text-secondary">Services</h4>
+      <div className="flex md:flex-col">
+        <div className="bg-bg flex-grow flex items-center pl-10 md:pl-0 w-full">
+          <h4 className="text-secondary md:mx-auto md:py-3">Services</h4>
         </div>
-        <PriceCard title="Basic Plan" price={599} />
-        <PriceCard title="Standard" price={699} popular bg="bg-white" />
-        <PriceCard title="Professional" price={799} />
+        <div className="flex border-t-[1px] border-gray border-opacity-30">
+          <PriceCard title="Basic Plan" price={599} />
+          <PriceCard title="Standard" price={699} popular bg="bg-white" />
+          <PriceCard title="Professional" price={799} />
+        </div>
       </div>
       <div className="flex h-[1px]">
-        <div className="w-10 bg-bg" />
+        <div className="w-10 bg-bg md:bg-gray md:bg-opacity-30" />
         <div className="flex-grow bg-gray bg-opacity-30"></div>
       </div>
       {servicePricing.map(({ id, service, basic, standard, professional }) => (
         <Price key={id} title={service} basic={basic} standard={standard} professional={professional} />
       ))}
       <div className="flex">
-        <div className="bg-bg flex-grow pl-10 py-16"></div>
-        <div className="w-56 bg-bg flex items-center justify-center">
-          <Button className="!py-2 px-10">Buy Now</Button>
+        <div className="bg-bg flex-grow pl-10 md:pl-0 py-16"></div>
+        <div className="w-56 xl:w-48 lg:w-32 md:w-1/3 bg-bg flex items-center justify-center">
+          <Button className="!py-2 px-10 md:p-2">Buy Now</Button>
         </div>
-        <div className="w-56 bg-white flex items-center justify-center">
-          <Button className="!py-2 px-10">Buy Now</Button>
+        <div className="w-56 xl:w-48 lg:w-32 md:w-1/3 bg-white flex items-center justify-center">
+          <Button className="!py-2 px-10 md:p-2">Buy Now</Button>
         </div>
-        <div className="w-56 bg-bg flex items-center justify-center">
-          <Button className="!py-2 px-10">Buy Now</Button>
+        <div className="w-56 xl:w-48 lg:w-32 md:w-1/3 bg-bg flex items-center justify-center">
+          <Button className="!py-2 px-10 md:p-2">Buy Now</Button>
         </div>
       </div>
     </section>
