@@ -8,9 +8,24 @@ import image6 from '@assets/images/gallery/6.png'
 import bg from '@assets/images/gallery/bg.png'
 import BreadCrumb from '@components/ui/BreadCrumb'
 
-const GalleryCard = ({ img, title, description }: { img: string; title: string; description: string }) => {
+export const GalleryCard = ({
+  img,
+  title,
+  description,
+  onClick,
+  ...rest
+}: {
+  img: string
+  title: string
+  description: string
+  onClick?: () => void
+}) => {
   return (
-    <div className="p-4 xl:p-2 sm:p-0 sm:pb-3 w-1/3 lg:w-1/2 sm:w-full text-center cursor-pointer">
+    <div
+      className="p-4 xl:p-2 sm:p-0 sm:pb-3 w-1/3 lg:w-1/2 sm:w-full text-center cursor-pointer"
+      onClick={onClick}
+      {...rest}
+    >
       <div className="p-5 xl:p-2 lg:p-4 xsm:p-2 bg-white h-full border-[1px] border-gray border-opacity-30">
         <img src={img} alt={title} className="w-full h-auto object-cover" />
         <h6 className="text-secondary pt-4 pb-1">{title}</h6>
