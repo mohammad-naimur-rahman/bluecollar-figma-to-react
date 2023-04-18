@@ -59,11 +59,11 @@ const SecondSection = () => {
               desc="Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium"
             />
             <Timeline
-              year="2022"
+              year="2020"
               desc="Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium"
             />
             <Timeline
-              year="2022"
+              year="2015"
               desc="Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium"
             />
           </div>

@@ -20,9 +20,9 @@ const TeamSingle = () => {
       <BreadCrumb img={bg} title="David James" />
       <section className="bg-white">
         <div className="container p-xl">
-          <div className="flex gap-14">
-            <img src={hero} alt="David James" className="w-2/5 h-auto object-cover" />
-            <div className="w-3/5">
+          <div className="flex md:flex-col gap-14">
+            <img src={hero} alt="David James" className="w-2/5 h-auto object-cover md:w-full" />
+            <div className="w-3/5 md:w-full">
               <h5 className="text-secondary">Devid is a professional Engineer for BlueCollar since 2010</h5>
               <p className="text-gray py-5">
                 Hello! to the table win survival strategy ensure to proactive domination At the end of the day, going
