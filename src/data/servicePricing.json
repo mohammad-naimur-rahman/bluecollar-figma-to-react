@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "service": "Electrical Service Repairs, Upgrades",
+    "basic": true,
+    "standard": true,
+    "professional": true
+  },
+  {
+    "id": 2,
+    "service": "Distribution Power Systems",
+    "basic": true,
+    "standard": true,
+    "professional": true
+  },
+  {
+    "id": 3,
+    "service": "High & Medium Voltage Substations\t",
+    "basic": true,
+    "standard": true,
+    "professional": true
+  },
+  {
+    "id": 4,
+    "service": "Industrial Control Systems\t",
+    "basic": true,
+    "standard": true,
+    "professional": true
+  },
+  {
+    "id": 5,
+    "service": "Switch Installation\t",
+    "basic": true,
+    "standard": true,
+    "professional": true
+  },
+  {
+    "id": 6,
+    "service": "Generator Installations\t",
+    "basic": true,
+    "standard": true,
+    "professional": true
+  },
+  {
+    "id": 7,
+    "service": "Innovative Construction Alternatives\t",
+    "basic": false,
+    "standard": true,
+    "professional": true
+  },
+  {
+    "id": 8,
+    "service": "PLC Controls",
+    "basic": false,
+    "standard": true,
+    "professional": true
+  },
+  {
+    "id": 9,
+    "service": "Conveyor systems\t",
+    "basic": false,
+    "standard": false,
+    "professional": true
+  },
+  {
+    "id": 10,
+    "service": "Wiring renovations",
+    "basic": false,
+    "standard": false,
+    "professional": true
+  }
+]

@@ -19,7 +19,7 @@ const Homepage = () => {
       <WhyChooseUs />
       <RecentWorks />
       <TestimonialsAndForm />
-      <PriceAndPlan />
+      <PriceAndPlan headerTitle="Price and Plan" />
       <MoreBlogs />
     </Layout>
   )

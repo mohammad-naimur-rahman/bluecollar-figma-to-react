@@ -54,12 +54,12 @@ const plans = [
   }
 ]
 
-const PriceAndPlan = () => {
+const PriceAndPlan = ({ headerTitle }: { headerTitle: string }) => {
   return (
     <div className="container py-40 xl:py-36 lg:py-32 md:py-28 sm:py-24">
       <div className="flex md:flex-col items-center justify-between">
         <div className="w-1/2 md:w-full">
-          <Heading img={icon} title="Price and Plan" bg="bg-white" />
+          <Heading img={icon} title={headerTitle} bg="bg-white" />
           <h2 className="text-secondary py-3 xl:text-[30px]">Let’s Customize Work With Affordable Price</h2>
         </div>
         <p className="text-gray w-1/2 md:w-full md:pb-5">
@@ -71,7 +71,7 @@ const PriceAndPlan = () => {
       <div className="flex gap-6 xl:gap-0 lg:gap-6 sm:gap-0 justify-between lg:justify-center flex-wrap">
         {plans.map(({ id, name, price, popular, items }) => (
           <div key={id} className="w-[30%] lg:w-[calc(50%_-_12px)] sm:w-full sm:mb-5 shadow-md">
-            <div className="p-10 xl:p-5 bg-white h-full flex flex-col justify-between">
+            <div className="p-8 xl:p-5 bg-white h-full flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between">
                   <div className="flex flex-col text-secondary">
@@ -84,7 +84,7 @@ const PriceAndPlan = () => {
                     })}
                   >
                     {popular ? <span className="bg-primary text-secondary px-3 py-1 mb-2">POPULAR</span> : null}
-                    <p className="text-gray">Per Visit Charge</p>
+                    <p className="text-gray text-base">Per Visit Charge</p>
                   </div>
                 </div>
 
