@@ -48,6 +48,11 @@
         "link": "/team"
       },
       {
+        "id": 12,
+        "name": "Team Single",
+        "link": "/team/1"
+      },
+      {
         "id": 7,
         "name": "FAQ",
         "link": "/faq"
