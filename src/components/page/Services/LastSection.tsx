@@ -5,6 +5,7 @@ import { RxCaretRight } from 'react-icons/rx'
 import bg from '@assets/images/services/bg.png'
 import tick from '@assets/images/homepage/tick.png'
 import howWeWork from '@assets/images/services/how-we-works.png'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const tickItems = [
   'Telecom Installation and Repair',
@@ -19,12 +20,18 @@ const tickItems = [
   'Ballast/Lamp Replacing'
 ]
 
-const Tick = ({ title }: { title: string }) => {
+const Tick = ({ title, index }: { title: string; index: number }) => {
   return (
-    <div className="flex items-center pb-5 w-1/2 pr-[10%] sm:w-full sm:pr-0">
+    <AnimationOnScroll
+      animateIn="animate__fadeInRight"
+      duration={0.3}
+      offset={50}
+      delay={index * 50}
+      className="flex items-center pb-5 w-1/2 pr-[10%] sm:w-full sm:pr-0"
+    >
       <img src={tick} alt="tick" className="w-6 h-6 aspect-square object-cover" />
       <p className="text-gray pl-4">{title}</p>
-    </div>
+    </AnimationOnScroll>
   )
 }
 
@@ -116,8 +123,8 @@ const LastSection = () => {
             <img src={howWeWork} alt="We can help you with the following services" className="w-full py-8" />
 
             <div className="flex flex-wrap">
-              {tickItems.map(tickItem => (
-                <Tick key={tickItem} title={tickItem} />
+              {tickItems.map((tickItem, i) => (
+                <Tick key={tickItem} title={tickItem} index={i} />
               ))}
             </div>
           </div>
