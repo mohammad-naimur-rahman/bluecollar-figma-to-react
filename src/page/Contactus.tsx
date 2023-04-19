@@ -7,27 +7,30 @@ import { ReactNode } from 'react'
 import Button from '@components/ui/Button'
 import { FaClock, FaUser } from 'react-icons/fa'
 import { ContactForm } from './FAQ'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const FirstCard = ({
   icon,
   title,
   desc,
-  buttonText
+  buttonText,
+  animateIn
 }: {
   icon: ReactNode
   title: string
   desc: string
   buttonText: string
+  animateIn: string
 }) => {
   return (
-    <div className="flex flex-col items-center bg-primary p-10 lg:p-5 md:w-full">
+    <AnimationOnScroll animateIn={animateIn} className="flex flex-col items-center bg-primary p-10 lg:p-5 md:w-full">
       <span className="text-secondary text-4xl mb-3">{icon}</span>
       <p className="font-bold text-secondary">{title}</p>
       <h6 className="text-white py-3">{desc}</h6>
       <Button variant="secondary" className="!py-2 mt-3">
         {buttonText}
       </Button>
-    </div>
+    </AnimationOnScroll>
   )
 }
 
@@ -57,14 +60,26 @@ const Contactus = () => {
           </div>
 
           <div className="flex md:flex-col items-center justify-center pt-md">
-            <FirstCard icon={<FaClock />} title="Emergency Works" desc="(003) 123 456 7890" buttonText="Call Us" />
+            <FirstCard
+              icon={<FaClock />}
+              title="Emergency Works"
+              desc="(003) 123 456 7890"
+              buttonText="Call Us"
+              animateIn="animate__fadeInLeft"
+            />
             <div className="flex flex-col items-center bg-secondary p-10 lg:p-5 md:w-full">
               <p className="font-bold text-primary pb-5">Main Branch</p>
               <CardContent title="Address" desc="Amsterdam, 109-74" />
               <CardContent title="Phone" desc="+01 569 896 654" />
               <CardContent title="Mail " desc="info@example.com" />
             </div>
-            <FirstCard icon={<FaUser />} title="Have a question?" desc="(003) 123 456 7890" buttonText="Reach Us" />
+            <FirstCard
+              icon={<FaUser />}
+              title="Have a question?"
+              desc="(003) 123 456 7890"
+              buttonText="Reach Us"
+              animateIn="animate__fadeInRight"
+            />
           </div>
         </div>
       </section>

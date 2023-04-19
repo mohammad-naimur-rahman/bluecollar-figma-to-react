@@ -4,6 +4,7 @@ import bg from '@assets/images/team-single/bg.png'
 import hero from '@assets/images/team-single/hero.png'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import Button from '@components/ui/Button'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const Contact = ({ title, desc }: { title: string; desc: string }) => {
   return (
@@ -21,8 +22,10 @@ const TeamSingle = () => {
       <section className="bg-white">
         <div className="container p-xl">
           <div className="flex md:flex-col gap-14">
-            <img src={hero} alt="David James" className="w-2/5 h-auto object-cover md:w-full" />
-            <div className="w-3/5 md:w-full">
+            <AnimationOnScroll animateIn="animate__bounceInLeft" className="w-2/5 h-auto">
+              <img src={hero} alt="David James" className="w-full h-full object-cover md:w-full" />
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__bounceInRight" className="w-3/5 md:w-full">
               <h5 className="text-secondary">Devid is a professional Engineer for BlueCollar since 2010</h5>
               <p className="text-gray py-5">
                 Hello! to the table win survival strategy ensure to proactive domination At the end of the day, going
@@ -43,7 +46,7 @@ const TeamSingle = () => {
               </div>
 
               <Button>Contact Me</Button>
-            </div>
+            </AnimationOnScroll>
           </div>
 
           <h2 className="text-secondary pt-8">Qualification & Experience</h2>
