@@ -17,17 +17,48 @@ const Team = () => {
       <section className="bg-white p-xxl">
         <div className="container">
           <div className="container flex flex-wrap justify-around">
-            <GalleryCard img={image1} title="David James" description="Engineer" onClick={() => navigate('/team/1')} />
-            <GalleryCard img={image2} title="Kevin Martin" description="Engineer" onClick={() => navigate('/team/1')} />
+            <GalleryCard
+              img={image1}
+              title="David James"
+              description="Engineer"
+              onClick={() => navigate('/team/1')}
+              index={0}
+            />
+            <GalleryCard
+              img={image2}
+              title="Kevin Martin"
+              description="Engineer"
+              onClick={() => navigate('/team/1')}
+              index={1}
+            />
             <GalleryCard
               img={image3}
               title="Sarrah Albert"
               description="Engineer"
               onClick={() => navigate('/team/1')}
+              index={2}
             />
-            <GalleryCard img={image4} title="Jake Gibson" description="Engineer" onClick={() => navigate('/team/1')} />
-            <GalleryCard img={image5} title="Natalie Lee" description="Engineer" onClick={() => navigate('/team/1')} />
-            <GalleryCard img={image1} title="Max Oliver" description="Engineer" onClick={() => navigate('/team/1')} />
+            <GalleryCard
+              img={image4}
+              title="Jake Gibson"
+              description="Engineer"
+              onClick={() => navigate('/team/1')}
+              index={3}
+            />
+            <GalleryCard
+              img={image5}
+              title="Natalie Lee"
+              description="Engineer"
+              onClick={() => navigate('/team/1')}
+              index={4}
+            />
+            <GalleryCard
+              img={image1}
+              title="Max Oliver"
+              description="Engineer"
+              onClick={() => navigate('/team/1')}
+              index={5}
+            />
           </div>
         </div>
       </section>

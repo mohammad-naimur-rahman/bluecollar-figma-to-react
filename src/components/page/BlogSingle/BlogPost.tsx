@@ -1,11 +1,12 @@
 import hero from '@assets/images/blog/hero.png'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { BsClockFill, BsPersonFill } from 'react-icons/bs'
 
 const BlogPost = () => {
   return (
     <section className="bg-white p-xxl">
       <div className="container">
-        <div className="relative">
+        <AnimationOnScroll animateIn="zoomInUp" className="relative">
           <img src={hero} alt="Perfect Work Time For Workers" />
           <div className="absolute -bottom-6 sm:-bottom-20 left-1/2 -translate-x-1/2 text-secondary flex sm:flex-col">
             <div className="bg-primary-light flex items-center justify-center py-3 px-4 md:py-1 md:px-2 sm:py-3 sm:px-4 xsm:px-2 xsm:py-1">
@@ -21,7 +22,7 @@ const BlogPost = () => {
               <p className="w-[max-content] ml-2">04:30 PM</p>
             </div>
           </div>
-        </div>
+        </AnimationOnScroll>
         <div className="max-w-[800px] px-5 md:px-2 [&>p]:text-gray mx-auto mt-12 sm:mt-28">
           <p>
             Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium dynamically

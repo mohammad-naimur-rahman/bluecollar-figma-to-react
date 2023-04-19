@@ -5,6 +5,7 @@ import hero from '@assets/images/gallery-single/hero.png'
 import image1 from '@assets/images/gallery-single/1.png'
 import image2 from '@assets/images/gallery-single/2.png'
 import image3 from '@assets/images/gallery-single/3.png'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const CardItems = ({ title, desc }: { title: string; desc: string }) => {
   return (
@@ -16,15 +17,29 @@ const CardItems = ({ title, desc }: { title: string; desc: string }) => {
   )
 }
 
-const GalleryCard = ({ img, title, description }: { img: string; title: string; description: string }) => {
+const GalleryCard = ({
+  img,
+  title,
+  description,
+  index
+}: {
+  img: string
+  title: string
+  description: string
+  index: number
+}) => {
   return (
-    <div className="p-4 xl:p-2 sm:p-0 sm:pb-3 w-1/3 lg:w-1/2 sm:w-full text-center cursor-pointer">
+    <AnimationOnScroll
+      animateIn="animate__fadeInUp"
+      delay={index * 70}
+      className="p-4 xl:p-2 sm:p-0 sm:pb-3 w-1/3 lg:w-1/2 sm:w-full text-center cursor-pointer"
+    >
       <div className="p-5 xl:p-2 lg:p-4 xsm:p-2 bg-white h-full border-[1px] border-gray border-opacity-30">
         <img src={img} alt={title} className="w-full h-auto object-cover" />
         <h6 className="text-secondary pt-4 pb-1">{title}</h6>
         <p className="text-gray">{description}</p>
       </div>
-    </div>
+    </AnimationOnScroll>
   )
 }
 
@@ -47,9 +62,9 @@ const GallerySingle = () => {
               <CardItems title="Category" desc="Service" />
               <CardItems title="Value" desc="$2 250 000" />
             </div>
-            <div>
+            <AnimationOnScroll animateIn="zoomIn">
               <img src={hero} alt="Project Information" className="h-full object-cover" />
-            </div>
+            </AnimationOnScroll>
           </div>
 
           <div className="p-xl text-gray [&>p]:py-3">
@@ -85,9 +100,9 @@ const GallerySingle = () => {
 
           <h2 className="text-secondary pl-4 xl:pl-2 sm:pl-0 pb-2 md:pb-5">Related Projects</h2>
           <div className="flex flex-wrap justify-between">
-            <GalleryCard title="Electrical & Maintenance" description="House, office" img={image1} />
-            <GalleryCard title="Industry Machine Issue" description="House, office" img={image2} />
-            <GalleryCard title="Industry Machine Issue" description="House, office" img={image3} />
+            <GalleryCard title="Electrical & Maintenance" description="House, office" img={image1} index={0} />
+            <GalleryCard title="Industry Machine Issue" description="House, office" img={image2} index={1} />
+            <GalleryCard title="Industry Machine Issue" description="House, office" img={image3} index={2} />
           </div>
         </div>
       </section>

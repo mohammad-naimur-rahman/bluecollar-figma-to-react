@@ -1,10 +1,11 @@
 import quote from '@assets/images/homepage/quote.png'
 import comment from '@assets/images/blog/comment.png'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const BlogComment = () => {
   return (
     <section className="p-xl bg-bg">
-      <div className="max-w-[800px] px-5 md:px-2 mx-auto text-center">
+      <AnimationOnScroll animateIn="animate__bounceInUp" className="max-w-[800px] px-5 md:px-2 mx-auto text-center">
         <div className="p-5 rounded-full bg-primary aspect-square inline-flex justify-center items-center">
           <img src={quote} alt="quote" />
         </div>
@@ -20,7 +21,7 @@ const BlogComment = () => {
         <img src={comment} alt="Nancy Luther" className="mx-auto w-[70px] h-[70px] rounded-full" />
         <p className="py-2 font-bold text-secondary">Nancy Luther</p>
         <p className="text-sm text-gray">New York</p>
-      </div>
+      </AnimationOnScroll>
     </section>
   )
 }

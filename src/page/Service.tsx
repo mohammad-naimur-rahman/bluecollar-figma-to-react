@@ -12,6 +12,8 @@ import next from '@assets/images/service/next.png'
 import expert1 from '@assets/images/service/expert1.png'
 import expert2 from '@assets/images/service/expert2.png'
 import expert3 from '@assets/images/service/expert3.png'
+import CountUpOnView from '@components/lib/CountUpOnView'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const ticks = [
   'Telecom Installation and Repair',
@@ -34,37 +36,51 @@ const secondTicks = [
   'services for domestic and commercial'
 ]
 
-const Tick = ({ title, bottomMargin = true }: { title: string; bottomMargin: boolean }) => {
+const Tick = ({ title, bottomMargin = true, index }: { title: string; bottomMargin: boolean; index: number }) => {
   return (
-    <div className="flex flex-col">
+    <AnimationOnScroll
+      animateIn="animate__fadeInRight"
+      duration={0.3}
+      offset={50}
+      delay={index * 50}
+      className="flex flex-col"
+    >
       <div className="flex pb-5">
         <img src={tick} alt="tick" className="w-6 h-6 aspect-square object-cover" />
         <p className="text-gray pl-4">{title}</p>
       </div>
       {bottomMargin && <div className="w-full h-[1px] bg-gray bg-opacity-30 mb-5" />}
-    </div>
+    </AnimationOnScroll>
   )
 }
 
 const Tiles = ({ img, title, desc }: { img: string; title: string; desc: string }) => {
   return (
-    <div className="flex items-start w-[calc(50%_-_40px)] xl:w-[calc(50%_-_20px)] lg:w-full">
+    <AnimationOnScroll
+      animateIn="animate__zoomIn"
+      duration={0.4}
+      className="flex items-start w-[calc(50%_-_40px)] xl:w-[calc(50%_-_20px)] lg:w-full"
+    >
       <img src={img} alt={title} className="w-8 h-8 aspect-square object-cover" />
       <div className="pl-5">
         <h6 className="text-secondary pb-1">{title}</h6>
         <p className="text-gray text-sm">{desc}</p>
       </div>
-    </div>
+    </AnimationOnScroll>
   )
 }
 
-const TeamMember = ({ img, name, title }: { img: string; name: string; title: string }) => {
+const TeamMember = ({ img, name, title, index }: { img: string; name: string; title: string; index: number }) => {
   return (
-    <div className="w-1/3 lg:w-full border-[1px] border-gray border-opacity-30 p-3 text-center">
+    <AnimationOnScroll
+      animateIn="animate__zoomIn"
+      delay={index * 70}
+      className="w-1/3 lg:w-full border-[1px] border-gray border-opacity-30 p-3 text-center"
+    >
       <img src={img} alt={name} className="w-full h-auto" />
       <h6 className="text-secondary pt-4">{name}</h6>
       <p className="text-gray pb-1 pt-1">{title}</p>
-    </div>
+    </AnimationOnScroll>
   )
 }
 
@@ -84,15 +100,17 @@ const Service = () => {
               <p>Providing Varity</p>
               <p>Electrical Services</p>
               <div className="bg-primary text-secondary my-4 py-2 px-5">
-                <p className="font-normal">Discount 25%</p>
+                <p className="font-normal">
+                  Discount <CountUpOnView end={25} duration={1} />%
+                </p>
                 <p>Rewiring Services</p>
               </div>
               <p>Click to Get Discount</p>
             </div>
 
             <h5 className="py-5">Our Services</h5>
-            {ticks.map(tick => (
-              <Tick key={tick} title={tick} bottomMargin={true} />
+            {ticks.map((tick, i) => (
+              <Tick key={tick} title={tick} bottomMargin={true} index={i} />
             ))}
           </div>
 
@@ -108,7 +126,7 @@ const Service = () => {
               strategies.
             </p>
 
-            <div className="flex sm:flex-col py-10">
+            <AnimationOnScroll animateIn="animate__bounceInRight" className="flex sm:flex-col py-10">
               <div className="min-w-[60px] sm:w-auto sm:h-11 bg-secondary"></div>
               <div className="bg-primary">
                 <p className="text-xl text-secondary px-14 lg:px-10 md:px-8 sm:px-6 py-12 lg:py-8 md:py-6 sm:py-5 font-bold italic">
@@ -116,7 +134,7 @@ const Service = () => {
                   work is pattern recognition, making sense of what you see.
                 </p>
               </div>
-            </div>
+            </AnimationOnScroll>
 
             <p className="text-gray">
               Coordinate proactives e-commerce process centric outside the box thinking completely pursue scalabl
@@ -156,8 +174,8 @@ const Service = () => {
 
             <div className="flex lg:flex-col items-center py-8 gap-6">
               <div className="w-1/2 lg:w-full lg:order-2">
-                {secondTicks.map(tick => (
-                  <Tick key={tick} title={tick} bottomMargin={false} />
+                {secondTicks.map((tick, i) => (
+                  <Tick key={tick} title={tick} bottomMargin={false} index={i} />
                 ))}
               </div>
               <div className="w-1/2 lg:w-full lg:order-1">
@@ -167,9 +185,9 @@ const Service = () => {
 
             <h3 className="text-secondary pt-5 pb-8">Our Expert Team</h3>
             <div className="flex lg:flex-col gap-3">
-              <TeamMember img={expert1} name="Gavin Avery" title="Engineer" />
-              <TeamMember img={expert2} name="Nathan Tucker" title="Engineer" />
-              <TeamMember img={expert3} name="Sarrah Albert" title="Engineer" />
+              <TeamMember img={expert1} name="Gavin Avery" title="Engineer" index={0} />
+              <TeamMember img={expert2} name="Nathan Tucker" title="Engineer" index={1} />
+              <TeamMember img={expert3} name="Sarrah Albert" title="Engineer" index={2} />
             </div>
           </div>
         </div>
