@@ -1,5 +1,6 @@
 import logo from '@assets/logo-2.png'
 import { ReactNode } from 'react'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { FaEnvelope, FaFacebook, FaInstagram, FaMarker, FaPhone, FaPinterest, FaTwitter } from 'react-icons/fa'
 
 const footerInfos = [
@@ -60,7 +61,10 @@ const Footer = () => {
   return (
     <footer>
       <div className="bg-primary py-28 xl:py-24 lg:py-20 md:py-16 sm:py-12">
-        <div className="container flex lg:flex-col items-center justify-between gap-20 lg:gap-10">
+        <AnimationOnScroll
+          animateIn="animate__bounce"
+          className="container flex lg:flex-col items-center justify-between gap-20 lg:gap-10"
+        >
           <div className="text-secondary lg:w-full">
             <h2>Subscribe Our Newsletter</h2>
             <p>
@@ -77,7 +81,7 @@ const Footer = () => {
             />
             <button className="bg-white text-secondary px-8 xsm:px-4 font-bold">Subscribe</button>
           </div>
-        </div>
+        </AnimationOnScroll>
       </div>
 
       <div className="bg-secondary">

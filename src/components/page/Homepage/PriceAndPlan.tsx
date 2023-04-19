@@ -5,6 +5,7 @@ import icon from '@assets/images/homepage/why-choose-us-icon.png'
 import yellowTick from '@assets/images/homepage/yellow-tick.png'
 import tick from '@assets/images/homepage/tick.png'
 import classNames from 'classnames'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const plans = [
   {
@@ -70,7 +71,12 @@ const PriceAndPlan = ({ headerTitle }: { headerTitle: string }) => {
 
       <div className="flex gap-6 xl:gap-0 lg:gap-6 sm:gap-0 justify-between lg:justify-center flex-wrap">
         {plans.map(({ id, name, price, popular, items }) => (
-          <div key={id} className="w-[30%] lg:w-[calc(50%_-_12px)] sm:w-full sm:mb-5 shadow-md">
+          <AnimationOnScroll
+            animateIn="animate__zoomInUp"
+            delay={(id - 1) * 100}
+            key={id}
+            className="w-[30%] lg:w-[calc(50%_-_12px)] sm:w-full sm:mb-5 shadow-md"
+          >
             <div className="p-8 xl:p-5 bg-white h-full flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between">
@@ -102,7 +108,7 @@ const PriceAndPlan = ({ headerTitle }: { headerTitle: string }) => {
                 Buy Now
               </Button>
             </div>
-          </div>
+          </AnimationOnScroll>
         ))}
       </div>
 

@@ -1,6 +1,7 @@
 import Button from '@components/ui/Button'
 import { blogs } from '../Homepage/BlogAndArticles'
 import { BsChevronRight, BsClockFill, BsPersonFill } from 'react-icons/bs'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const MoreBlogs = () => {
   return (
@@ -13,7 +14,12 @@ const MoreBlogs = () => {
 
         <div className="flex md:flex-col gap-10 lg:gap-5 md:gap-3 sm:gap-5 items-stretch justify-center">
           {blogs.map(({ id, img, title, description, writer, date }) => (
-            <div key={id} className="w-1/2 md:w-full">
+            <AnimationOnScroll
+              animateIn="animate__backInUp"
+              delay={(id - 1) * 100}
+              key={id}
+              className="w-1/2 md:w-full"
+            >
               <div className="flex flex-col justify-between items-start h-full">
                 <div>
                   <div className="relative">
@@ -40,7 +46,7 @@ const MoreBlogs = () => {
                   </span>
                 </button>
               </div>
-            </div>
+            </AnimationOnScroll>
           ))}
         </div>
       </div>

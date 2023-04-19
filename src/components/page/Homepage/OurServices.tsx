@@ -8,6 +8,7 @@ import serviceCard4 from '@assets/images/homepage/service-card-4.png'
 import serviceCard5 from '@assets/images/homepage/service-card-5.png'
 import serviceCard6 from '@assets/images/homepage/service-card-6.png'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
+import { useNavigate } from 'react-router-dom'
 
 const services = [
   {
@@ -43,6 +44,7 @@ const services = [
 ]
 
 const OurServices = () => {
+  const navigate = useNavigate()
   return (
     <div className="container py-28 xl:py-24 lg:py-20 md:py-16 sm:py-12">
       <div className="w-[60%] lg:w-[80%] md:w-full text-center flex flex-col justify-center items-center mx-auto">
@@ -69,7 +71,9 @@ const OurServices = () => {
                 Sagittis Nulla facilisi. In sed pretium metus. Proin pretium Turna sit amet tincidunt.
               </p>
             </div>
-            <button className="text-white pt-5 font-bold">Read More</button>
+            <button className="text-white pt-5 font-bold" onClick={() => navigate('/services/1')}>
+              Read More
+            </button>
           </AnimationOnScroll>
         ))}
       </div>

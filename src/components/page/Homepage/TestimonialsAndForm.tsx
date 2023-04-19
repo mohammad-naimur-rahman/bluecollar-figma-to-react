@@ -15,6 +15,7 @@ import Input from '../../ui/Input'
 import Button from '../../ui/Button'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Swiper as SwiperType } from 'swiper'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const TestimonialPerson = ({ img, name, desc }: { img: string; name: string; desc: string }) => {
   return (
@@ -64,10 +65,10 @@ const TestimonialsAndForm = () => {
                   <TestimonialPerson img={testimonial1} name="Nancy Luther" desc="NewYork" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <TestimonialPerson img={gallery1} name="Fancy Luther" desc="NewYork" />
+                  <TestimonialPerson img={gallery1} name="John Doe" desc="Sydney" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <TestimonialPerson img={gallery2} name="Gandy Luther" desc="NewYork" />
+                  <TestimonialPerson img={gallery2} name="Morgan Busyman" desc="Dhaka" />
                 </SwiperSlide>
               </Swiper>
               <div className="bg-primary w-14 h-14 sm:w-10 sm:h-10 rounded-full flex justify-center items-center">
@@ -135,7 +136,10 @@ const TestimonialsAndForm = () => {
             </div>
           </div>
 
-          <div className="bg-primary p-8 sm:p-4 xxsm:p-2 text-secondary mt-5 shadow-lg">
+          <AnimationOnScroll
+            animateIn="animate__zoomIn"
+            className="bg-primary p-8 sm:p-4 xxsm:p-2 text-secondary mt-5 shadow-lg"
+          >
             <Heading img={icon} title="Any Question" />
             <h5 className="pt-4 pb-4">99.9% Customer Satisfation Based</h5>
             <p>If you have any questions or need help contact with our team, or call</p>
@@ -146,7 +150,7 @@ const TestimonialsAndForm = () => {
               </div>
               <h5 className="text-white pl-3">(003) 123 456 7890</h5>
             </div>
-          </div>
+          </AnimationOnScroll>
         </div>
         <div className="w-1/2 lg:w-full lg:pt-10">
           <Heading img={icon} title="Meet Us" />
