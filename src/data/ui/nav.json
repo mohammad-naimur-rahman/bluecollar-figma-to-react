@@ -63,16 +63,6 @@
         "link": "/protected"
       },
       {
-        "id": 9,
-        "name": "Lisences",
-        "link": "/lisences"
-      },
-      {
-        "id": 10,
-        "name": "Changelog",
-        "link": "/changelog"
-      },
-      {
         "id": 11,
         "name": "Error Page",
         "link": "/error"

@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import Footer from './Footer'
 import Header from './Header'
+import ScrollToTop from 'react-scroll-to-top'
 
 const Wrapper = () => {
   return (
@@ -8,6 +9,7 @@ const Wrapper = () => {
       <Header />
       <Outlet />
       <Footer />
+      <ScrollToTop smooth />
     </div>
   )
 }

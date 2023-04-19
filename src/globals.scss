@@ -287,3 +287,20 @@ textarea {
 .pb-xsm {
   @apply pb-12 xl:pb-12 lg:pb-12 md:pb-12 sm:pb-12;
 }
+
+.scroll-to-top {
+  border-radius: 9999px !important;
+  padding: 30px;
+  z-index: 100;
+  box-shadow: 2px 1px 15px 2px rgba(0, 0, 0, 0.28) !important;
+
+  &:active {
+    transform: none !important;
+  }
+
+  svg {
+    position: fixed;
+    right: 55px;
+    bottom: 55px;
+  }
+}
