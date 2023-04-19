@@ -4,14 +4,19 @@ import icon from '@assets/images/homepage/services-icon.png'
 import expert1 from '@assets/images/about-us/expert1.png'
 import expert2 from '@assets/images/about-us/expert2.png'
 import expert3 from '@assets/images/about-us/expert3.png'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const Card = ({ img, title, desc }: { img: string; title: string; desc: string }) => {
   return (
-    <div className="w-1/3 sm:w-full border-gray border-[1px] border-opacity-30 p-7 lg:p-3 cursor-pointer shadow-md">
+    <AnimationOnScroll
+      animateIn="animate__zoomIn"
+      duration={0.3}
+      className="w-1/3 sm:w-full border-gray border-[1px] border-opacity-30 p-7 lg:p-3 cursor-pointer shadow-md"
+    >
       <img src={img} alt={title} />
       <h5 className="text-secondary pt-7 sm:pt-3">{title}</h5>
       <p className="text-gray">{desc}</p>
-    </div>
+    </AnimationOnScroll>
   )
 }
 

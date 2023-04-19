@@ -2,17 +2,18 @@ import React from 'react'
 import icon from '@assets/images/homepage/icon.png'
 import tick from '@assets/images/homepage/tick.png'
 import Heading from '../../ui/Heading'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const Timeline = ({ year, desc }: { year: string; desc: string }) => {
   return (
-    <div className="flex gap-12 items-center">
+    <AnimationOnScroll animateIn="animate__bounceInRight" className="flex gap-12 items-center">
       <div className="w-[10px] h-[10px] min-w-[10px] rounded-full bg-secondary outline-2 outline-secondary outline outline-offset-2 shadow-lg" />
       <div className="bg-white p-5 relative">
         <p className="absolute bg-secondary text-primary px-8 py-1 -top-5 left-3">{year}</p>
         <p>{desc}</p>
         <div className="absolute top-1/2 -left-2 -translate-y-1/2 w-4 h-4 bg-white rotate-45 shadow-md -z-[1]" />
       </div>
-    </div>
+    </AnimationOnScroll>
   )
 }
 

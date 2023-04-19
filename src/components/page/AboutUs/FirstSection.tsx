@@ -9,6 +9,8 @@ import vector1 from '@assets/images/about-us/vector1.png'
 import vector2 from '@assets/images/about-us/vector2.png'
 import vector3 from '@assets/images/about-us/vector3.png'
 import vector4 from '@assets/images/about-us/vector4.png'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
+import CountUpOnView from '@components/lib/CountUpOnView'
 
 const TickSection = ({ children }: { children: string | ReactNode }) => {
   return (
@@ -19,11 +21,24 @@ const TickSection = ({ children }: { children: string | ReactNode }) => {
   )
 }
 
-const Card = ({ img, title, desc }: { img: string; title: string; desc: string }) => {
+const Card = ({
+  img,
+  title,
+  desc,
+  hasPlus = false
+}: {
+  img: string
+  title: number
+  desc: string
+  hasPlus?: boolean
+}) => {
   return (
     <div className="flex flex-col items-center justify-center basis-[calc(25%_-_32px)] xl:basis-[calc(25%_-_20px)] md:basis-[calc(50%_-_20px)] sm:basis-full text-secondary text-center bg-bg p-8 xl:p-5 shadow-md">
-      <img src={img} alt={title} className="w-16 h-auto" />
-      <h3 className="py-1">{title}</h3>
+      <img src={img} alt="image" className="w-16 h-auto" />
+      <h3 className="py-1">
+        <CountUpOnView end={title} className="text-3xl" />
+        {hasPlus ? '+' : ''}
+      </h3>
       <p>{desc}</p>
     </div>
   )
@@ -34,7 +49,7 @@ const FirstSection = () => {
     <section className="bg-white p-xxl">
       <div className="container">
         <div className="flex lg:flex-col gap-32 xl:gap-5">
-          <div className="w-[60%] lg:w-full lg:order-2">
+          <AnimationOnScroll animateIn="animate__fadeInLeft" className="w-[60%] lg:w-full lg:order-2">
             <Heading title="Welcome to BlueCollar" img={icon} />
             <h2 className="text-secondary w-2/3 xl:w-full">We're commited to Quality</h2>
             <p className="text-gray pt-3 pb-10">
@@ -66,18 +81,18 @@ const FirstSection = () => {
                 <h5 className="text-primary">(03) 123 456 78990</h5>
               </div>
             </div>
-          </div>
+          </AnimationOnScroll>
 
-          <div className="w-[40%] lg:w-full lg:order-1 lg:mb-12">
+          <AnimationOnScroll animateIn="animate__fadeInRight" className="w-[40%] lg:w-full lg:order-1 lg:mb-12">
             <img src={hero} alt="hero image" className="w-full h-full object-cover" />
-          </div>
+          </AnimationOnScroll>
         </div>
 
         <div className="flex flex-wrap gap-10 justify-between xl:gap-5 pt-xxl lg:order-3">
-          <Card img={vector1} title="1920" desc="Project Completed" />
-          <Card img={vector2} title="2500+" desc="Industry Solutions" />
-          <Card img={vector3} title="500+" desc="Expert Contractors" />
-          <Card img={vector4} title="1k+" desc="Happy Customers" />
+          <Card img={vector1} title={1920} desc="Project Completed" />
+          <Card img={vector2} title={2500} hasPlus desc="Industry Solutions" />
+          <Card img={vector3} title={500} hasPlus desc="Expert Contractors" />
+          <Card img={vector4} title={1000} hasPlus desc="Happy Customers" />
         </div>
       </div>
     </section>
