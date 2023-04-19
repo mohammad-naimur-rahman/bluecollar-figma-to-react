@@ -7,6 +7,7 @@ import serviceCard3 from '@assets/images/homepage/service-card-3.png'
 import serviceCard4 from '@assets/images/homepage/service-card-4.png'
 import serviceCard5 from '@assets/images/homepage/service-card-5.png'
 import serviceCard6 from '@assets/images/homepage/service-card-6.png'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const services = [
   {
@@ -54,8 +55,10 @@ const OurServices = () => {
       </div>
 
       <div className="flex flex-wrap sm:flex-col justify-center my-9 gap-6 lg:gap-3 sm:gap-0">
-        {services.map(({ id, img, title }) => (
-          <section
+        {services.map(({ id, img, title }, i) => (
+          <AnimationOnScroll
+            animateIn="animate__fadeInUp"
+            delay={i * 100}
             key={id}
             className="w-[30%] xl:w-[30%] lg:w-[calc(33%_-_6px)] md:w-[45%] sm:w-full px-9 py-12 lg:px-5 lg:py-5 bg-secondary flex flex-col items-start justify-between sm:mb-3 shadow-md shadow-secondary"
           >
@@ -67,7 +70,7 @@ const OurServices = () => {
               </p>
             </div>
             <button className="text-white pt-5 font-bold">Read More</button>
-          </section>
+          </AnimationOnScroll>
         ))}
       </div>
     </div>

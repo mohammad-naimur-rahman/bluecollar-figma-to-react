@@ -1,7 +1,9 @@
-import React from 'react'
+import { useRef, ReactNode } from 'react'
 import Heading from '../../ui/Heading'
 import icon from '@assets/images/homepage/why-choose-us-icon.png'
 import testimonial1 from '@assets/images/homepage/testimonial-person.png'
+import gallery1 from '@assets/images/homepage/gallery-1.png'
+import gallery2 from '@assets/images/homepage/gallery-2.png'
 import quote from '@assets/images/homepage/quote.png'
 import dial from '@assets/images/homepage/dial.png'
 import brand1 from '@assets/images/homepage/brand-1.png'
@@ -11,8 +13,28 @@ import brand4 from '@assets/images/homepage/brand-4.png'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 import Input from '../../ui/Input'
 import Button from '../../ui/Button'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Swiper as SwiperType } from 'swiper'
+
+const TestimonialPerson = ({ img, name, desc }: { img: string; name: string; desc: string }) => {
+  return (
+    <div className="flex justify-center items-center bg-white">
+      <img src={img} alt={name} className="w-[70px] sm:w-[50px] h-auto aspect-square object-cover rounded-full" />
+      <div className="pl-3">
+        <p className="text-secondary font-bold">{name}</p>
+        <p className="text-gray text-sm pt-2 xsm:pt-0">{desc}</p>
+      </div>
+    </div>
+  )
+}
+
+const TestimonialText = ({ children }: { children: ReactNode }) => {
+  return <p className="text-gray italic">{children}</p>
+}
 
 const TestimonialsAndForm = () => {
+  const swiperRef = useRef<SwiperType>()
+  const swiperRef2 = useRef<SwiperType>()
   return (
     <div className="bg-white">
       <div className="container flex lg:flex-col gap-10 pt-40 xl:py-36 lg:py-32 md:py-28 sm:py-24">
@@ -22,28 +44,92 @@ const TestimonialsAndForm = () => {
 
           <div className="border-[1px] border-gray border-opacity-30 p-8 sm:p-4 xxsm:p-2 shadow-md">
             <div className="flex justify-between items-center">
-              <div className="flex justify-center items-center">
-                <img src={testimonial1} alt="Nancy Luther" className="w-[70px] sm:w-[50px] h-auto" />
-                <div className="pl-3">
-                  <p className="text-secondary font-bold">Nancy Luther</p>
-                  <p className="text-gray text-sm pt-2 xsm:pt-0">NewYork</p>
-                </div>
-              </div>
+              {/**Swiper for person */}
+              <Swiper
+                cssMode
+                direction="vertical"
+                modules={[Autoplay]}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false
+                }}
+                loop
+                speed={1000}
+                onBeforeInit={swiper => {
+                  swiperRef.current = swiper
+                }}
+                className="w-2/3 m-0 h-[70px]"
+              >
+                <SwiperSlide>
+                  <TestimonialPerson img={testimonial1} name="Nancy Luther" desc="NewYork" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <TestimonialPerson img={gallery1} name="Fancy Luther" desc="NewYork" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <TestimonialPerson img={gallery2} name="Gandy Luther" desc="NewYork" />
+                </SwiperSlide>
+              </Swiper>
               <div className="bg-primary w-14 h-14 sm:w-10 sm:h-10 rounded-full flex justify-center items-center">
                 <img src={quote} alt="quote" className="sm:w-5 h-auto" />
               </div>
             </div>
             <div className="w-full h-[1px] bg-gray bg-opacity-30 my-7"></div>
-            <p className="text-gray italic">
-              Pellentesque vehicula eros neque, maximus mattis est sagittis facilisi.{' '}
-              <span className="font-bold text-secondary">”In sed pretium metus”</span>. Ppretium id urna sit amet
-              tincidunt. Lorem ipsum dolor sit amet,tristique. Duis cursus,in elementum tristique
-            </p>
+            {/**Swiper for testimonials */}
+            <Swiper
+              cssMode
+              modules={[Autoplay]}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false
+              }}
+              loop
+              speed={1000}
+              onBeforeInit={swiper => {
+                swiperRef2.current = swiper
+              }}
+            >
+              <SwiperSlide>
+                <TestimonialText>
+                  Pellentesque vehicula eros neque, maximus mattis est sagittis facilisi.{' '}
+                  <span className="font-bold text-secondary">”In sed pretium metus”</span>. Ppretium id urna sit amet
+                  tincidunt. Lorem ipsum dolor sit amet,tristique. Duis cursus,in elementum tristique
+                </TestimonialText>
+              </SwiperSlide>
+              <SwiperSlide>
+                <TestimonialText>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quoLorem ipsum dolor sit amet.
+                  Lorem, ipsum.
+                  <span className="font-bold text-secondary">”Lorem ipsum dolor sit amet.”</span>. Ppretium id urna sit
+                  amet tincidunt. Lorem ipsum dolor sit amet,tristique. Duis cursus,in elementum tristique
+                </TestimonialText>
+              </SwiperSlide>
+              <SwiperSlide>
+                <TestimonialText>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nobis consequatur suscipit nisi error
+                  et numquam quidem consectetur quae distinctio, excepturi iure saepe inventore ea?
+                  <span className="font-bold text-secondary">”Lorem ipsum dolor sit amet.”</span>. Ppretium id urna sit
+                  amet tincid
+                </TestimonialText>
+              </SwiperSlide>
+            </Swiper>
             <div className="flex gap-4 pt-5">
-              <div className="w-11 h-11 rounded-full flex justify-center items-center cursor-pointer bg-bg">
+              <div
+                className="w-11 h-11 rounded-full flex justify-center items-center cursor-pointer bg-bg"
+                onClick={() => {
+                  swiperRef.current?.slidePrev()
+                  swiperRef2.current?.slidePrev()
+                }}
+              >
                 <BsChevronLeft />
               </div>
-              <div className="w-11 h-11 rounded-full flex justify-center items-center bg-primary cursor-pointer">
+              <div
+                className="w-11 h-11 rounded-full flex justify-center items-center bg-primary cursor-pointer"
+                onClick={() => {
+                  swiperRef.current?.slideNext()
+                  swiperRef2.current?.slideNext()
+                }}
+              >
                 <BsChevronRight />
               </div>
             </div>

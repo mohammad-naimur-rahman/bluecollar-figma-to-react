@@ -2,10 +2,16 @@ import whyChooseUsImg from '@assets/images/homepage/why-choose-us.png'
 import whyChooseUsIcon from '@assets/images/homepage/why-choose-us-icon.png'
 import tick from '@assets/images/homepage/tick.png'
 import Heading from '../../ui/Heading'
+import CountUpOnView from '@components/lib/CountUpOnView'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
-const TickSection = ({ title }: { title: string }) => {
+const TickSection = ({ title, index }: { title: string; index: number }) => {
   return (
-    <div className="flex justify-start items-start pb-4">
+    <AnimationOnScroll
+      animateIn="animate__fadeInRight"
+      delay={index * 100}
+      className="flex justify-start items-start pb-4"
+    >
       <img src={tick} alt="tick" className="w-8 h-auto mt-1" />
       <div className="flex flex-col ml-3">
         <h6 className="text-secondary">{title}</h6>
@@ -13,16 +19,16 @@ const TickSection = ({ title }: { title: string }) => {
           Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium
         </p>
       </div>
-    </div>
+    </AnimationOnScroll>
   )
 }
 
-const StatisticsCard = ({ qty, title }: { qty: string | number; title: string }) => {
+const StatisticsCard = ({ qty, title, hasPlus = false }: { qty: number; title: string; hasPlus?: boolean }) => {
   return (
     <div className="flex mb-6 xsm:mb-4 xxsm:mb-3 last:mb-0 border-2 border-white sm:text-base">
       <div className="bg-primary">
-        <p className="py-4 px-6 sm:py-2 sm:px-4 xxsm:px-1 xxsm:py-1 font-bold min-w-[90px] sm:min-w-[70px] text-center">
-          {qty}
+        <p className="flex py-4 px-6 sm:py-2 sm:px-4 xxsm:px-1 xxsm:py-1 font-bold min-w-[90px] sm:min-w-[70px] text-center">
+          <CountUpOnView end={qty} /> {hasPlus ? '+' : ''}
         </p>
       </div>
       <p className="py-4 px-6 sm:py-2 sm:px-4 xxsm:px-1 xxsm:py-1 text-white min-w-[250px] sm:min-w-[180px]">{title}</p>
@@ -39,7 +45,7 @@ const WhyChooseUs = () => {
           <StatisticsCard qty={3956} title="Projects Done" />
           <StatisticsCard qty={851} title="People Working" />
           <StatisticsCard qty={265} title="Business Partners" />
-          <StatisticsCard qty="854+" title="Happy Customers" />
+          <StatisticsCard qty={854} title="Happy Customers" hasPlus />
         </div>
       </div>
       <div className="w-[55%] lg:w-full">
@@ -50,9 +56,9 @@ const WhyChooseUs = () => {
             Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium metus. Proin
             pretium id urna sit amet tincidunt. Interdum et malesuada.{' '}
           </p>
-          <TickSection title="35 Years Experience" />
-          <TickSection title="Excellencee Certificate" />
-          <TickSection title="Affordable Price" />
+          <TickSection title="35 Years Experience" index={0} />
+          <TickSection title="Excellencee Certificate" index={1} />
+          <TickSection title="Affordable Price" index={2} />
         </div>
       </div>
     </div>

@@ -14,6 +14,7 @@ import Services from './page/Services'
 import Team from './page/Team'
 import TeamSingle from './page/TeamSingle'
 import Wrapper from './components/ui/Wrapper'
+import 'animate.css/animate.min.css'
 
 export default function App() {
   return (

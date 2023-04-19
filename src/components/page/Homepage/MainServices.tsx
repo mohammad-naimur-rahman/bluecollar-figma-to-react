@@ -1,5 +1,4 @@
 import classNames from 'classnames'
-import React from 'react'
 import first from '@assets/images/homepage/first.png'
 import second from '@assets/images/homepage/second.png'
 import third from '@assets/images/homepage/third.png'
@@ -8,6 +7,7 @@ import servicesHero from '@assets/images/homepage/services-hero.png'
 import Button from '../../ui/Button'
 import styles from '@styles/page/homepage.module.scss'
 import Heading from '../../ui/Heading'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const NavButton = ({ img, title, className }: { img: string; title: string; className: string }) => {
   return (
@@ -44,7 +44,10 @@ const MainServices = () => {
           </div>
         </div>
 
-        <div className="container bg-white p-10 xl:p-8 md:p-5 xsm:p-3 flex lg:flex-col justify-between shadow-lg">
+        <AnimationOnScroll
+          animateIn="animate__fadeInUp"
+          className="container bg-white p-10 xl:p-8 md:p-5 xsm:p-3 flex lg:flex-col justify-between shadow-lg"
+        >
           <div className="w-[60%] lg:w-full lg:order-2 lg:mt-5">
             <Heading img={fourth} title="Based on Commercial" className="mb-2" />
             <h3>Commercial</h3>
@@ -63,7 +66,7 @@ const MainServices = () => {
             alt="Services"
             className="w-[40%] lg:w-full grayscale hover:grayscale-0 transition-all lg:order-1"
           />
-        </div>
+        </AnimationOnScroll>
       </div>
     </div>
   )
